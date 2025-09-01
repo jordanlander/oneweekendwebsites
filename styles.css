@@ -11,12 +11,12 @@
     .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
     .logo{width:34px;height:34px;border-radius:10px;display:block;object-fit:cover;box-shadow:var(--shadow)}
     .nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:26px;cursor:pointer}
-    .nav-menu{display:flex}
-    .nav-menu a{margin:0 10px;color:var(--muted);text-decoration:none;font-weight:600}
-    .nav-menu a:hover{color:var(--text)}
+    nav{display:flex}
+    nav a{margin:0 10px;color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--text)}
     @media (max-width:700px){
-      .nav-menu{display:none;flex-direction:column;gap:8px;position:absolute;top:100%;right:0;background:var(--card);padding:10px 14px;border:1px solid #1e2633;border-radius:var(--radius)}
-      .nav-menu.open{display:flex}
+      nav{display:none;flex-direction:column;gap:8px;position:absolute;top:100%;right:0;background:var(--card);padding:10px 14px;border:1px solid #1e2633;border-radius:var(--radius)}
+      nav.open{display:flex}
       .nav-toggle{display:block}
     }
 
