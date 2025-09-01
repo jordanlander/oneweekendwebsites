@@ -63,7 +63,8 @@
       </nav>
     </div>
   </header>
-  <section class="hero">
+  <main>
+  <section class="hero" aria-label="Hero">
     <div class="container hero-content">
       <div>
         <span class="badge">$499 flat • Mobile‑first • Small‑biz friendly</span>
@@ -110,7 +111,7 @@
   </section>
 
   <div class="container">
-    <section id="pricing" class="grid cols-3">
+    <section id="pricing" class="grid cols-3" aria-label="Pricing">
       <div class="card pricing">
         <p class="kicker">Core Package</p>
         <h3>Launch‑Ready Site (48 hours)</h3>
@@ -153,7 +154,7 @@
       </div>
     </section>
 
-    <section id="process" class="card steps" style="margin-top:22px">
+    <section id="process" class="card steps" style="margin-top:22px" aria-label="Process">
       <div class="kicker">How it works</div>
       <h2 style="margin:6px 0 4px">48‑Hour Sprint</h2>
       <div class="step"><div class="n">0</div><div><strong>Fit check (15 min, Thu/Fri)</strong><br/>We confirm scope, you send logo/colors/hours, and place a small deposit to hold the slot.</div></div>
@@ -161,7 +162,7 @@
       <div class="step"><div class="n">2</div><div><strong>Launch (Sun)</strong><br/>We push live to your domain (or a subdomain). You get a simple handoff doc + optional 30‑min walkthrough.</div></div>
     </section>
 
-    <section id="work" style="margin-top:22px">
+    <section id="work" style="margin-top:22px" aria-label="Work">
       <div class="kicker">Recent work</div>
       <h2 style="margin:6px 0 12px">Local builds that shipped</h2>
       <div class="grid cols-3">
@@ -207,7 +208,7 @@
       </div>
     </section>
 
-    <section id="faq" style="margin-top:22px" class="grid cols-2">
+    <section id="faq" style="margin-top:22px" class="grid cols-2" aria-label="FAQ">
       <div class="card" style="padding:16px">
         <div class="kicker">FAQ</div>
         <h2 style="margin:6px 0 12px">What most folks ask</h2>
@@ -250,7 +251,7 @@
       </div>
     </section>
 
-    <section id="book" class="card" style="margin-top:22px;padding:18px">
+    <section id="book" class="card" style="margin-top:22px;padding:18px" aria-label="Book">
       <div class="kicker">Get started</div>
       <h2 style="margin:6px 0 12px">Book a free 15‑minute fit check</h2>
       <p class="small">Pick a slot and include a link to any existing socials (Facebook, Google, Etsy) so I can match the look.</p>
@@ -267,7 +268,7 @@
       <!-- Stripe placeholders: replace YOUR_STRIPE_DEPOSIT_LINK / YOUR_STRIPE_BALANCE_LINK with your live Stripe Payment Links. Statement descriptor suggestion: ONE-WEEKEND WEB – JCLANDER LLC -->
     </section>
 
-    <section id="contact" class="card" style="margin-top:22px;padding:18px">
+    <section id="contact" class="card" style="margin-top:22px;padding:18px" aria-label="Contact">
       <div class="kicker">Contact</div>
       <h2 style="margin:6px 0 12px">Send a quick message</h2>
       <form action="https://formsubmit.co/jordanlander@gmail.com" method="POST">
@@ -310,8 +311,10 @@
       </div>
       <p class="small" style="margin-top:10px;color:#9fb3cc">This form uses FormSubmit (free). We never sell your info. For faster replies, include your link(s) and ideal launch weekend.</p>
     </section>
+  </div>
+  </main>
 
-    <footer>
+  <footer>
       <div class="footgrid">
         <div>© <span id="y"></span> JCLander LLC d/b/a One‑Weekend Websites • Lake City / Erie, PA • <a href="tel:18145808040">814‑580‑8040</a> • <a href="mailto:jordanlander@gmail.com">jordanlander@gmail.com</a> • <a href="https://jordanlander.com" target="_blank" rel="noopener">About me</a>
           
@@ -322,7 +325,6 @@
         </div>
       </div>
   </footer>
-  </div>
   <script>
     (function(){
       var toggle = document.querySelector('.nav-toggle');
