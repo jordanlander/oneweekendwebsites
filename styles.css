@@ -11,13 +11,15 @@
     img{max-width:100%;height:auto;display:block}
     .container{max-width:1100px;margin:0 auto;padding:24px}
     .site-header{position:sticky;top:0;z-index:1000;background:linear-gradient(to bottom, rgba(11,13,16,.85), rgba(11,13,16,0));backdrop-filter:blur(8px)}
-    .site-header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;position:relative}
+    .site-header .container{display:flex;align-items:center;gap:16px;padding:16px 24px;position:relative}
     .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
     .logo{width:34px;height:34px;border-radius:10px;display:block;object-fit:cover;box-shadow:var(--shadow)}
-    .nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:26px;cursor:pointer}
-    nav{display:flex;gap:12px}
+    .nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:26px;cursor:pointer;margin-left:auto}
+    nav{display:flex;gap:12px;margin-left:auto}
     nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px;transition:background .2s,color .2s}
     nav a:hover{color:var(--text);background:rgba(125,211,252,.15)}
+    #sticky-cta{margin-left:16px;flex-shrink:0}
+    #mobile-sticky{display:none}
     @media (max-width:700px){
       nav{display:flex;flex-direction:column;gap:8px;position:absolute;top:100%;right:0;background:rgba(16,20,26,.9);padding:10px 14px;border:1px solid #1e2633;border-radius:var(--radius);backdrop-filter:blur(8px);transform-origin:top right;transform:scaleY(0);opacity:0;pointer-events:none;overflow:hidden;visibility:hidden;transition:transform .3s ease,opacity .3s ease,visibility 0s linear .3s}
       nav.open{transform:scaleY(1);opacity:1;pointer-events:auto;visibility:visible;transition:transform .3s ease,opacity .3s ease}
@@ -76,4 +78,9 @@
     @media (max-width:500px){
       .btn{width:100%;text-align:center}
       .cta-row{justify-content:center}
+    }
+    @media (max-width:900px){
+      #sticky-cta{display:none}
+      #mobile-sticky{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px;background:#0b0d10cc;backdrop-filter:blur(8px);z-index:50}
+      #mobile-sticky a{flex:1}
     }
