@@ -10,11 +10,11 @@
   <meta property="og:title" content="One‑Weekend Websites — Launch‑Ready in 48 Hours" />
   <meta property="og:description" content="Clean, fast one‑page sites for barbers, thrift/vintage, lawn care, churches, boosters, Etsy sellers. $499 flat. 48‑hour turnaround." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/one-weekend-websites/og-card.jpg" />
-  <meta property="og:url" content="https://jordanlander.com/one-weekend-websites" />
+  <meta property="og:image" content="/og-card.jpg" />
+  <meta property="og:url" content="https://www.oneweekendwebsites.com/" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="canonical" href="https://jordanlander.com/one-weekend-websites" />
+  <link rel="canonical" href="https://www.oneweekendwebsites.com/" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>">
 
   <style>
@@ -87,7 +87,7 @@
       "availability": "https://schema.org/InStock"
     },
     "category": "Web Design",
-    "url": "https://jordanlander.com/one-weekend-websites"
+    "url": "https://www.oneweekendwebsites.com/"
   }
   </script>
 </head>
@@ -107,6 +107,7 @@
         <a href="#work">Work</a>
         <a href="#faq">FAQ</a>
         <a href="#book">Book</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -240,8 +241,8 @@
           <p>If we miss the weekend due to my side, you get a 20% discount on the balance. Client delays pause the clock.</p>
         </details>
         <details>
-          <summary>COI‑safe scope</summary>
-          <p>This service is for general small businesses and community orgs—no school/IEP consulting or overlapping IU5 services.</p>
+          <summary>Scope & simplicity</summary>
+          <p>This starter is intentionally focused: a fast, one‑page site built in a weekend. E‑commerce and complex backends aren’t part of this package, but we can discuss them as a follow‑on.</p>
         </details>
       </div>
     </section>
@@ -255,37 +256,61 @@
         <a class="btn btn-outline" href="YOUR_STRIPE_DEPOSIT_LINK" target="_blank" rel="noopener" id="pay-deposit">Pay $50 deposit</a>
         <a class="btn btn-outline" href="YOUR_STRIPE_BALANCE_LINK" target="_blank" rel="noopener" id="pay-balance">Pay $449 launch balance (plus tax*)</a>
       </div>
+      <p><strong>Prefer to call or email?</strong><br>
+        Call or text <a href="tel:18145808040">814‑580‑8040</a> · 
+        Email <a href="mailto:jordanlander@gmail.com?subject=One‑Weekend%20Websites%20Fit%20Check">jordanlander@gmail.com</a>
+      </p>
       <p class="small">*PA clients: Website development is taxable when the site is transferred to you (files/repo/ownership). Hosting/domain configuration/support listed separately is non‑taxable.</p>
       <!-- Stripe placeholders: replace YOUR_STRIPE_DEPOSIT_LINK / YOUR_STRIPE_BALANCE_LINK with your live Stripe Payment Links. Statement descriptor suggestion: ONE-WEEKEND WEB – JCLANDER LLC -->
     </section>
 
-    <section id="invoice" class="card" style="margin-top:22px;padding:18px">
-      <div class="kicker">Template</div>
-      <h2 style="margin:6px 0 12px">Short Invoice (PA‑ready)</h2>
-      <p class="small">Copy/paste and fill the blanks. Use this when billing PA clients; tax the development portion if you transfer the website/files.</p>
-<pre style="background:#0f1319;border:1px solid #1e2633;border-radius:12px;padding:14px;white-space:pre-wrap;color:#cce7ff">Seller: <strong>JCLander LLC d/b/a One‑Weekend Websites</strong>
-Email: hello@jordanlander.com   Phone: (___) ___‑____
-Bill To: __________________________   Date: ________   Invoice #: ________
+    <section id="contact" class="card" style="margin-top:22px;padding:18px">
+      <div class="kicker">Contact</div>
+      <h2 style="margin:6px 0 12px">Send a quick message</h2>
+      <form action="https://formsubmit.co/jordanlander@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="One‑Weekend Websites — New inquiry" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="https://www.oneweekendwebsites.com/#thanks" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
-Description                                  Qty    Rate      Amount
---------------------------------------------------------------------------------
-Website development — launch‑ready one‑page   1      $499.00   $499.00   ← <em>Taxable in PA</em>
-Hosting / domain configuration / support     1      $50.00    $50.00    ← <em>Non‑taxable when separately stated</em>
-
-Subtotal (taxable): $499.00
-PA Sales Tax (6.00%)*: $29.94
-Subtotal (non‑taxable): $50.00
---------------------------------------------------------------------------------
-Total Due: $578.94
-
-*Use local rate if applicable (Allegheny +1%, Philadelphia +2%).
-Payment: Stripe link or ACH (include terms). Deposit required to reserve weekend slot; balance due at launch.
-</pre>
+        <div class="grid cols-2" style="margin-top:8px">
+          <div>
+            <label for="name" class="small">Name</label>
+            <input id="name" name="name" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #2c3442;background:#0f1319;color:#eaf2ff" />
+          </div>
+          <div>
+            <label for="email" class="small">Email</label>
+            <input id="email" name="email" type="email" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #2c3442;background:#0f1319;color:#eaf2ff" />
+          </div>
+        </div>
+        <div class="grid cols-2" style="margin-top:8px">
+          <div>
+            <label for="phone" class="small">Phone (optional)</label>
+            <input id="phone" name="phone" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2c3442;background:#0f1319;color:#eaf2ff" />
+          </div>
+          <div>
+            <label for="business" class="small">Business / Org (optional)</label>
+            <input id="business" name="business" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2c3442;background:#0f1319;color:#eaf2ff" />
+          </div>
+        </div>
+        <div style="margin-top:8px">
+          <label for="message" class="small">Message</label>
+          <textarea id="message" name="message" rows="4" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #2c3442;background:#0f1319;color:#eaf2ff"></textarea>
+        </div>
+        <div class="cta-row" style="margin-top:12px">
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <span class="small" style="color:#9fb3cc">Or call/text <a href="tel:18145808040">814‑580‑8040</a></span>
+        </div>
+      </form>
+      <div id="thanks" class="small" style="display:none;margin-top:12px;color:#34d399">
+        ✅ Thanks! Your message was sent. I’ll reply shortly.
+      </div>
+      <p class="small" style="margin-top:10px;color:#9fb3cc">This form uses FormSubmit (free). We never sell your info. For faster replies, include your link(s) and ideal launch weekend.</p>
     </section>
 
     <footer>
       <div class="footgrid">
-        <div>© <span id="y"></span> JCLander LLC d/b/a One‑Weekend Websites • Lake City / Erie, PA
+        <div>© <span id="y"></span> JCLander LLC d/b/a One‑Weekend Websites • Lake City / Erie, PA • <a href="tel:18145808040">814‑580‑8040</a> • <a href="mailto:jordanlander@gmail.com">jordanlander@gmail.com</a>
           <div class="small">Built with clean HTML/CSS. Deployed on GitHub Pages or your host. Fast, accessible, and easy to extend.</div>
         </div>
         <div style="text-align:right">
@@ -298,6 +323,13 @@ Payment: Stripe link or ACH (include terms). Deposit required to reserve weekend
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    // Show the post‑submit thank‑you if redirected with #thanks
+    if (location.hash === '#thanks') {
+      var t = document.getElementById('thanks');
+      if (t) t.style.display = 'block';
+    }
   </script>
 </body>
 </html>
