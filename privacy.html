@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — One‑Weekend Websites</title>
+  <meta name="description" content="Privacy policy for One‑Weekend Websites." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="canonical" href="https://www.oneweekendwebsites.com/privacy.html" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="logo" src="/logo.jpg" alt="One‑Weekend Websites logo" decoding="async" />
+        <div>
+          <div style="font-weight:900;letter-spacing:.3px">One‑Weekend Websites</div>
+          <div style="color:var(--muted);font-size:12px">Launch‑ready in 48 hours</div>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation" type="button">☰</button>
+      <nav id="primary-nav" aria-label="Primary">
+        <a href="/#pricing">Pricing</a>
+        <a href="/#process">Process</a>
+        <a href="/#work">Work</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#book">Book</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://jordanlander.com" target="_blank" rel="noopener">About</a>
+      </nav>
+      <a class="btn btn-primary" href="/#book" id="sticky-cta">Book free fit check</a>
+    </div>
+  </header>
+  <main class="container" style="padding-top:40px">
+    <h1>Privacy Policy</h1>
+    <p>We collect only the information needed to schedule and build your website. This may include your name, contact details, and project assets you provide. We never sell your data and only share it with trusted providers such as payment processors or scheduling tools to deliver our service. You can request deletion of your information at any time by contacting us.</p>
+  </main>
+  <footer>
+    <div class="footgrid">
+      <div>© <span id="y"></span> JCLander LLC d/b/a One‑Weekend Websites • Lake City / Erie, PA • <a href="tel:18145808040">814‑580‑8040</a> • <a href="mailto:jordanlander@gmail.com">jordanlander@gmail.com</a> • <a href="https://jordanlander.com" target="_blank" rel="noopener">About me</a></div>
+      <div style="text-align:right">
+        <a href="/#faq" style="margin-right:12px">Terms</a>
+        <a href="/#faq" style="margin-right:12px">Refunds</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </footer>
+  <div id="mobile-sticky">
+    <a class="btn btn-primary" href="/#book">Book</a>
+    <a class="btn btn-outline" href="tel:18145808040">Call/Text</a>
+  </div>
+  <script>
+    (function(){
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('primary-nav');
+      if(!toggle || !menu) return;
+      var firstLink = menu.querySelector('a');
+      toggle.addEventListener('click', function(){
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('open', !expanded);
+        if (!expanded && firstLink) {
+          firstLink.focus();
+        } else {
+          this.focus();
+        }
+      });
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.classList.remove('open');
+          toggle.focus();
+        }
+      });
+    })();
+  </script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
