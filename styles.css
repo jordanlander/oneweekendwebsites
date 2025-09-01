@@ -5,7 +5,8 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+    p{max-width:65ch;margin:0 0 1em}
     a{color:var(--accent)}
     img{max-width:100%;height:auto;display:block}
     .container{max-width:1100px;margin:0 auto;padding:24px}
@@ -18,8 +19,8 @@
     nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px;transition:background .2s,color .2s}
     nav a:hover{color:var(--text);background:rgba(125,211,252,.15)}
     @media (max-width:700px){
-      nav{display:flex;flex-direction:column;gap:8px;position:absolute;top:100%;right:0;background:rgba(16,20,26,.9);padding:10px 14px;border:1px solid #1e2633;border-radius:var(--radius);backdrop-filter:blur(8px);transform-origin:top right;transform:scaleY(0);opacity:0;pointer-events:none;overflow:hidden;transition:transform .3s ease,opacity .3s ease}
-      nav.open{transform:scaleY(1);opacity:1;pointer-events:auto}
+      nav{display:flex;flex-direction:column;gap:8px;position:absolute;top:100%;right:0;background:rgba(16,20,26,.9);padding:10px 14px;border:1px solid #1e2633;border-radius:var(--radius);backdrop-filter:blur(8px);transform-origin:top right;transform:scaleY(0);opacity:0;pointer-events:none;overflow:hidden;visibility:hidden;transition:transform .3s ease,opacity .3s ease,visibility 0s linear .3s}
+      nav.open{transform:scaleY(1);opacity:1;pointer-events:auto;visibility:visible;transition:transform .3s ease,opacity .3s ease}
       .nav-toggle{display:block}
     }
 
@@ -36,7 +37,8 @@
     .btn-outline{background:transparent;color:var(--text);border:1.5px solid #2c3442}
     .btn-outline:hover{background:rgba(125,211,252,.15)}
     .trust{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:14px}
-    .card{background:var(--card);border:1px solid #1e2633;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .card{background:var(--card);border:1px solid #1e2633;border-radius:var(--radius);box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.4)}
 
     .grid{display:grid;gap:18px}
     .grid.cols-3{grid-template-columns:repeat(3,1fr)}
@@ -65,8 +67,8 @@
 
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#0f1720;border:1px solid #1f2937;color:#9fb3cc;font-weight:700;font-size:12px}
 
-    .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
-    .fade-in.visible{opacity:1;transform:none}
+    .fade-in{opacity:0;transform:translateY(20px) scale(.98);filter:blur(6px);transition:opacity .6s ease,transform .6s ease,filter .6s ease}
+    .fade-in.visible{opacity:1;transform:none;filter:none}
     @media (prefers-reduced-motion:reduce){
       .fade-in{transition:none}
       .btn,.badge{transition:none}
