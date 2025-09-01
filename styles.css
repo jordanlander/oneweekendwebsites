@@ -19,8 +19,8 @@
     nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px;transition:background .2s,color .2s}
     nav a:hover{color:var(--text);background:rgba(125,211,252,.15)}
     @media (max-width:700px){
-      nav{display:flex;flex-direction:column;gap:8px;position:absolute;top:100%;right:0;background:rgba(16,20,26,.9);padding:10px 14px;border:1px solid #1e2633;border-radius:var(--radius);backdrop-filter:blur(8px);transform-origin:top right;transform:scaleY(0);opacity:0;pointer-events:none;overflow:hidden;transition:transform .3s ease,opacity .3s ease}
-      nav.open{transform:scaleY(1);opacity:1;pointer-events:auto}
+      nav{display:flex;flex-direction:column;gap:8px;position:absolute;top:100%;right:0;background:rgba(16,20,26,.9);padding:10px 14px;border:1px solid #1e2633;border-radius:var(--radius);backdrop-filter:blur(8px);transform-origin:top right;transform:scaleY(0);opacity:0;pointer-events:none;overflow:hidden;visibility:hidden;transition:transform .3s ease,opacity .3s ease,visibility 0s linear .3s}
+      nav.open{transform:scaleY(1);opacity:1;pointer-events:auto;visibility:visible;transition:transform .3s ease,opacity .3s ease}
       .nav-toggle{display:block}
     }
 
