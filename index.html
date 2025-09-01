@@ -51,16 +51,17 @@
           <div style="color:var(--muted);font-size:12px">Launch‑ready in 48 hours</div>
         </div>
       </a>
-      <nav>
-        <a href="#pricing">Pricing</a>
-        <a href="#process">Process</a>
-        <a href="#work">Work</a>
-        <a href="#faq">FAQ</a>
-        <a href="#book">Book</a>
-        <a href="#contact">Contact</a>
-        <a href="https://jordanlander.com" target="_blank" rel="noopener">About</a>
-      </nav>
-    </header>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation" type="button">☰</button>
+        <nav id="primary-nav" class="nav-menu" aria-label="Primary">
+          <a href="#pricing">Pricing</a>
+          <a href="#process">Process</a>
+          <a href="#work">Work</a>
+          <a href="#faq">FAQ</a>
+          <a href="#book">Book</a>
+          <a href="#contact">Contact</a>
+          <a href="https://jordanlander.com" target="_blank" rel="noopener">About</a>
+        </nav>
+      </header>
 
     <section class="hero">
       <div>
@@ -317,9 +318,34 @@
           <a href="#faq">Refunds</a>
         </div>
       </div>
-    </footer>
+  </footer>
   </div>
-
+  <script>
+      (function(){
+        var toggle = document.querySelector('.nav-toggle');
+        var menu = document.querySelector('.nav-menu');
+        if(!toggle || !menu) return;
+        var firstLink = menu.querySelector('a');
+        toggle.addEventListener('click', function(){
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          if(expanded){
+            menu.classList.remove('open');
+            this.focus();
+          }else{
+            menu.classList.add('open');
+            if(firstLink) firstLink.focus();
+          }
+        });
+        document.addEventListener('keydown', function(e){
+          if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+            toggle.setAttribute('aria-expanded', 'false');
+            menu.classList.remove('open');
+            toggle.focus();
+          }
+        });
+      })();
+  </script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
