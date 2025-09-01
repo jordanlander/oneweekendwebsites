@@ -15,7 +15,7 @@
     nav a{margin:0 10px;color:var(--muted);text-decoration:none;font-weight:600}
     nav a:hover{color:var(--text)}
     @media (max-width:700px){
-      nav{display:none;flex-direction:column;gap:8px;position:absolute;top:100%;right:0;background:var(--card);padding:10px 14px;border:1px solid #1e2633;border-radius:var(--radius)}
+      nav{display:none;flex-direction:column;gap:8px;position:absolute;top:100%;right:0;background:var(--card);padding:10px 14px;border:1px solid #1e2633;border-radius:var(--radius);z-index:1}
       nav.open{display:flex}
       .nav-toggle{display:block}
     }
