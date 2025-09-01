@@ -1,0 +1,8 @@
+{
+  "name": "oneweekendwebsites",
+  "version": "1.0.0",
+  "description": "One Weekend Websites static site",
+  "scripts": {
+    "test": "echo 'No tests specified'"
+  }
+}
