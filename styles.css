@@ -34,8 +34,9 @@
     .badge:hover{background:#17212e;transform:translateY(-2px)}
     .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
     .btn{appearance:none;border:0;cursor:pointer;padding:12px 16px;border-radius:12px;font-weight:800;letter-spacing:.2px;transition:background .3s,color .3s,transform .3s,opacity .3s}
-    .btn:hover{transform:translateY(-2px);opacity:.9}
-    .btn-primary{background:linear-gradient(135deg,var(--accent-2),var(--accent));color:#081018;box-shadow:var(--shadow)}
+    .btn:hover{transform:translateY(-1px);opacity:.9}
+    .btn:focus-visible{outline:3px solid var(--accent-2);outline-offset:2px;border-radius:12px}
+    .btn-primary{background:linear-gradient(135deg,var(--accent-2),var(--accent));color:#081018;box-shadow:0 10px 30px rgba(0,0,0,.35)}
     .btn-outline{background:transparent;color:var(--text);border:1.5px solid #2c3442}
     .btn-outline:hover{background:rgba(125,211,252,.15)}
     .trust{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:14px}
@@ -68,6 +69,7 @@
     @media (max-width:900px){.footgrid{grid-template-columns:1fr}}
 
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#0f1720;border:1px solid #1f2937;color:#9fb3cc;font-weight:700;font-size:12px}
+    .pill:hover{transform:translateY(-1px)}
 
     .fade-in{opacity:0;transform:translateY(20px) scale(.98);filter:blur(6px);transition:opacity .6s ease,transform .6s ease,filter .6s ease}
     .fade-in.visible{opacity:1;transform:none;filter:none}
