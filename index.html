@@ -110,7 +110,13 @@
         <div class="small" style="margin-top:8px">★★★★★ “Looks amazing—having schedules, forms &amp; an interactive calendar supports our students &amp; community.” — Girard Music &amp; Drama Boosters</div>
         <div class="small" style="margin-top:6px">★★★★★ “Website looks good and lead forms are working.” — Integrity EV Solutions</div>
         <div class="cta-row" style="margin-top:10px">
-          <span class="pill">2 openings this month</span>
+          <span
+  id="openings-pill"
+  class="pill"
+  data-username="jordanlander"
+  data-event-slug="fit-check-15"
+  data-timezone="America/New_York"
+>Checking openings…</span>
         </div>
       </div>
     </div>
@@ -387,6 +393,84 @@
         });
       }
     })();
+  </script>
+  <script>
+(async function () {
+  const el = document.getElementById('openings-pill');
+  if (!el) return;
+
+  const username = el.dataset.username;
+  const eventTypeSlug = el.dataset.eventSlug;       // e.g., "weekend-build-kickoff-30"
+  const timeZone = el.dataset.timezone || 'America/New_York';
+
+  // Month window (UTC date-only strings are allowed by the API)
+  const now = new Date();
+  const first = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1));
+  const last = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, 0));
+  const fmt = (d) => d.toISOString().slice(0, 10);  // YYYY-MM-DD
+
+  // Build request per Cal.com docs
+  const u = new URL('https://api.cal.com/v2/slots');
+  u.searchParams.set('eventTypeSlug', eventTypeSlug);
+  u.searchParams.set('username', username);
+  u.searchParams.set('start', fmt(first)); // start of day (UTC) accepted
+  u.searchParams.set('end', fmt(last));    // end of day (UTC) accepted
+  u.searchParams.set('timeZone', timeZone);
+
+  // Helper: weekday in specified TZ
+  const isSaturdayInTZ = (iso) => {
+    try {
+      const weekday = new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone })
+        .format(new Date(iso));
+      return weekday === 'Sat';
+    } catch { return false; }
+  };
+
+  // Fallback: count remaining Saturdays this month (manual)
+  const fallback = () => {
+    const today = new Date();
+    const year = today.getFullYear(), month = today.getMonth();
+    let d = new Date(year, month, 1), count = 0;
+    while (d.getMonth() === month) {
+      if (d.getDay() === 6 && d >= new Date(year, month, today.getDate())) count++;
+      d.setDate(d.getDate() + 1);
+    }
+    el.textContent = `${count} openings this month`;
+  };
+
+  try {
+    const res = await fetch(u.toString(), {
+      headers: { 'cal-api-version': '2024-09-04' } // required per docs
+    });
+    if (!res.ok) throw new Error('slots fetch failed');
+
+    const json = await res.json();
+    // Response is keyed by date; each value is an array of slots with ISO 'start'
+    // We only need UNIQUE Saturdays that have ≥1 slot (you run one kickoff per Sat)
+    const uniqueSaturdayKeys = new Set();
+
+    if (json?.data) {
+      // Iterate through all slot starts and mark Saturdays in ET
+      Object.values(json.data).forEach((arr) => {
+        (arr || []).forEach((slot) => {
+          const iso = slot.start || slot;
+          if (isSaturdayInTZ(iso)) {
+            // Normalize date string in ET for uniqueness
+            const dStr = new Intl.DateTimeFormat('en-CA', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit' })
+              .format(new Date(iso)); // -> YYYY-MM-DD
+            uniqueSaturdayKeys.add(dStr);
+          }
+        });
+      });
+    }
+
+    const count = uniqueSaturdayKeys.size;
+    el.textContent = `${count} opening${count === 1 ? '' : 's'} this month`;
+  } catch (e) {
+    // If the event is private or CORS blocks the call, fall back gracefully
+    fallback();
+  }
+})();
   </script>
 </body>
 </html>
