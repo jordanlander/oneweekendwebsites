@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One‑Weekend Websites — Launch‑Ready in 48 Hours | Jordan Lander</title>
+  <meta name="description" content="Productized website build: Launch‑ready, mobile‑first one‑page sites for local businesses in 48 hours. Flat $499. Optional domain setup + photo pass. Book a free 15‑minute fit check." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="One‑Weekend Websites — Launch‑Ready in 48 Hours" />
+  <meta property="og:description" content="Clean, fast one‑page sites for barbers, thrift/vintage, lawn care, churches, boosters, Etsy sellers. $499 flat. 48‑hour turnaround." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/one-weekend-websites/og-card.jpg" />
+  <meta property="og:url" content="https://jordanlander.com/one-weekend-websites" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="canonical" href="https://jordanlander.com/one-weekend-websites" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>">
+
+  <style>
+    :root{
+      --bg:#0b0d10; --card:#10141a; --muted:#6b7a90; --text:#eaf2ff; --accent:#7dd3fc; --accent-2:#60a5fa; --ok:#34d399; --warn:#fbbf24;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif}
+    a{color:var(--accent)}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+    .logo{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:var(--shadow);font-weight:800}
+    nav a{margin:0 10px;color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--text)}
+
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:36px 0}
+    .title{font-size:clamp(28px,5vw,46px);line-height:1.1;margin:0 0 12px 0}
+    .subtitle{color:var(--muted);font-size:clamp(16px,2.6vw,18px);margin:0 0 18px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:#0f1720;border:1px solid #1f2937;color:#cce7ff;font-weight:700;font-size:13px;margin-bottom:12px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
+    .btn{appearance:none;border:0;cursor:pointer;padding:12px 16px;border-radius:12px;font-weight:800;letter-spacing:.2px}
+    .btn-primary{background:linear-gradient(135deg,var(--accent-2),var(--accent));color:#081018;box-shadow:var(--shadow)}
+    .btn-outline{background:transparent;color:var(--text);border:1.5px solid #2c3442}
+    .trust{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:14px}
+    .card{background:var(--card);border:1px solid #1e2633;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+
+    .pricing{padding:8px 18px 18px}
+    .pricing h3{margin:10px 0 0}
+    .price{font-size:30px;font-weight:900;margin:0}
+    .inc{color:#cce7ff;margin:8px 0 0}
+    .small{font-size:13px;color:var(--muted)}
+
+    .steps{padding:16px}
+    .step{display:flex;gap:14px;padding:10px 0}
+    .n{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:#0f1720;border:1px solid #1f2937;color:#a5f3fc;font-weight:900}
+
+    details{border:1px solid #1e2633;border-radius:12px;padding:12px 16px;background:#0f1319}
+    summary{cursor:pointer;font-weight:800}
+
+    .kicker{color:#7dd3fc;font-weight:900;letter-spacing:.2em;text-transform:uppercase;font-size:12px}
+    .list{padding-left:18px;margin:8px 0}
+
+    footer{margin:40px 0 20px;color:var(--muted);font-size:14px}
+    .footgrid{display:grid;gap:16px;grid-template-columns:2fr 1fr}
+    @media (max-width:900px){.footgrid{grid-template-columns:1fr}}
+
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#0f1720;border:1px solid #1f2937;color:#9fb3cc;font-weight:700;font-size:12px}
+  </style>
+
+  <!-- JSON-LD schema for a productized service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "One‑Weekend Websites",
+    "brand": {"@type":"Brand","name":"JCLander LLC"},
+    "description": "Launch‑ready one‑page websites for local businesses in 48 hours. Flat $499 with optional add‑ons.",
+    "offers": {
+      "@type": "Offer",
+      "price": "499",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "category": "Web Design",
+    "url": "https://jordanlander.com/one-weekend-websites"
+  }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <div class="logo">⚡</div>
+        <div>
+          <div style="font-weight:900;letter-spacing:.3px">One‑Weekend Websites</div>
+          <div style="color:var(--muted);font-size:12px">Launch‑ready in 48 hours</div>
+        </div>
+      </a>
+      <nav>
+        <a href="#pricing">Pricing</a>
+        <a href="#process">Process</a>
+        <a href="#work">Work</a>
+        <a href="#faq">FAQ</a>
+        <a href="#book">Book</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="badge">$499 flat • Mobile‑first • Small‑biz friendly</span>
+        <h1 class="title">Your website, live by <em>Monday.</em></h1>
+        <p class="subtitle">A clean, fast one‑page site for barbers, thrift/vintage, lawn care, churches, boosters, Etsy sellers—built over a single weekend. You provide the basics; I handle the rest.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#book">Book a free 15‑min fit check</a>
+          <a class="btn btn-outline" href="#pricing">See what’s included</a>
+        </div>
+        <div class="trust">
+          <span class="pill">No hourly bloat</span>
+          <span class="pill">Clear scope</span>
+          <span class="pill">Fast turnaround</span>
+          <span class="pill">Own your domain</span>
+        </div>
+      </div>
+      <div class="card" style="padding:18px">
+        <div class="kicker">Demo layout</div>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='540' viewBox='0 0 960 540'%3E%3Crect width='960' height='540' fill='%23121a24'/%3E%3Crect x='40' y='40' rx='14' width='880' height='120' fill='%231b2430'/%3E%3Crect x='40' y='180' rx='14' width='540' height='240' fill='%231b2430'/%3E%3Crect x='600' y='180' rx='14' width='320' height='80' fill='%231b2430'/%3E%3Crect x='600' y='276' rx='14' width='320' height='80' fill='%231b2430'/%3E%3Crect x='600' y='372' rx='14' width='320' height='48' fill='%231b2430'/%3E%3C/svg%3E" alt="Wireframe preview of a clean one‑page layout" style="width:100%;border-radius:14px;border:1px solid #1e2633"/>
+        <p class="small" style="margin-top:10px">We’ll theme this to your brand colors and photos. Simple, fast, and easy to edit later.</p>
+      </div>
+    </section>
+
+    <section id="pricing" class="grid cols-3">
+      <div class="card pricing">
+        <p class="kicker">Core Package</p>
+        <h3>Launch‑Ready Site (48 hours)</h3>
+        <p class="price">$499</p>
+        <ul class="list">
+          <li>One‑page site (hero, services, hours, map, contact)</li>
+          <li>Mobile‑first, fast load, basic SEO</li>
+          <li>Google Map + contact form or direct call button</li>
+          <li>Favicon + Open Graph share image</li>
+          <li>2 image swaps post‑launch (within 14 days)</li>
+        </ul>
+        <p class="inc">Delivery windows: Fri kickoff → Sun launch</p>
+        <p class="small">PA clients: Website development is taxable when ownership/files are transferred; hosting/domain configuration listed separately is non‑taxable.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="#book">Book free fit check</a></div>
+      </div>
+
+      <div class="card pricing">
+        <p class="kicker">Popular Add‑Ons</p>
+        <h3>Upsells</h3>
+        <ul class="list">
+          <li><strong>Custom Domain Setup</strong> — <em>$50</em> (DNS, SSL, email forward)</li>
+          <li><strong>Photo Pass</strong> — <em>$50</em> (optimize 10 photos for web)</li>
+          <li><strong>Extra Section</strong> — <em>$75</em> (menu, gallery, pricing)</li>
+          <li><strong>Copy Polish</strong> — <em>$75</em> (voice + clarity edit)</li>
+          <li><strong>Basic Logo Lockup</strong> — <em>$75</em> (type‑driven)</li>
+        </ul>
+        <p class="small">All optional; pick only what you need.</p>
+      </div>
+
+      <div class="card pricing">
+        <p class="kicker">Scope Guardrails</p>
+        <h3>What’s not included</h3>
+        <ul class="list">
+          <li>E‑commerce checkout (we can link to Etsy/Square)</li>
+          <li>Custom backend or databases</li>
+          <li>More than 1 page (can add later)</li>
+          <li>Brand photography (Photo Pass optimizes what you have)</li>
+        </ul>
+        <p class="small">Keeps the weekend sprint realistic—and the price flat.</p>
+      </div>
+    </section>
+
+    <section id="process" class="card steps" style="margin-top:22px">
+      <div class="kicker">How it works</div>
+      <h2 style="margin:6px 0 4px">48‑Hour Sprint</h2>
+      <div class="step"><div class="n">0</div><div><strong>Fit check (15 min, Thu/Fri)</strong><br/>We confirm scope, you send logo/colors/hours, and place a small deposit to hold the slot.</div></div>
+      <div class="step"><div class="n">1</div><div><strong>Build day (Sat)</strong><br/>I assemble the site, tune copy, and optimize images. You get a private preview link for quick notes.</div></div>
+      <div class="step"><div class="n">2</div><div><strong>Launch (Sun)</strong><br/>We push live to your domain (or a subdomain). You get a simple handoff doc + optional 30‑min walkthrough.</div></div>
+    </section>
+
+    <section id="work" style="margin-top:22px">
+      <div class="kicker">Recent work</div>
+      <h2 style="margin:6px 0 12px">Before/After Minis</h2>
+      <div class="grid cols-3">
+        <div class="card" style="padding:10px">
+          <img alt="Barber shop site mockup" style="width:100%;border-radius:12px;border:1px solid #1e2633" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='360'%3E%3Crect width='600' height='360' fill='%23121a24'/%3E%3Crect x='36' y='36' width='528' height='96' rx='12' fill='%231b2430'/%3E%3Crect x='36' y='152' width='240' height='160' rx='12' fill='%231b2430'/%3E%3Crect x='296' y='152' width='268' height='64' rx='12' fill='%231b2430'/%3E%3Crect x='296' y='232' width='268' height='80' rx='12' fill='%231b2430'/%3E%3C/svg%3E"/>
+          <div class="small" style="margin-top:8px">Barber • bold headline + hours + map</div>
+        </div>
+        <div class="card" style="padding:10px">
+          <img alt="Thrift store site mockup" style="width:100%;border-radius:12px;border:1px solid #1e2633" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='360'%3E%3Crect width='600' height='360' fill='%23121a24'/%3E%3Crect x='36' y='36' width='528' height='96' rx='12' fill='%231b2430'/%3E%3Crect x='36' y='152' width='528' height='96' rx='12' fill='%231b2430'/%3E%3Crect x='36' y='264' width='176' height='60' rx='12' fill='%231b2430'/%3E%3Crect x='220' y='264' width='176' height='60' rx='12' fill='%231b2430'/%3E%3Crect x='404' y='264' width='160' height='60' rx='12' fill='%231b2430'/%3E%3C/svg%3E"/>
+          <div class="small" style="margin-top:8px">Thrift/Vintage • grid of drops + CTA</div>
+        </div>
+        <div class="card" style="padding:10px">
+          <img alt="Lawn care site mockup" style="width:100%;border-radius:12px;border:1px solid #1e2633" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='360'%3E%3Crect width='600' height='360' fill='%23121a24'/%3E%3Crect x='36' y='36' width='528' height='60' rx='12' fill='%231b2430'/%3E%3Crect x='36' y='112' width='240' height='84' rx='12' fill='%231b2430'/%3E%3Crect x='296' y='112' width='268' height='84' rx='12' fill='%231b2430'/%3E%3Crect x='36' y='212' width='240' height='112' rx='12' fill='%231b2430'/%3E%3Crect x='296' y='212' width='268' height='112' rx='12' fill='%231b2430'/%3E%3C/svg%3E"/>
+          <div class="small" style="margin-top:8px">Lawn Care • services + seasonal promo</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="margin-top:22px" class="grid cols-2">
+      <div class="card" style="padding:16px">
+        <div class="kicker">FAQ</div>
+        <h2 style="margin:6px 0 12px">What most folks ask</h2>
+        <details open>
+          <summary>What do you need from me to start?</summary>
+          <p>Logo (or name), brand color (hex if you have it), hours, address, services, and 3–6 photos. That’s it. A quick 15‑minute fit check locks it in.</p>
+        </details>
+        <details>
+          <summary>How do payments work?</summary>
+          <p>Small deposit to reserve a weekend slot; balance on launch. Card payments via Stripe/Square. Receipts provided.</p>
+        </details>
+        <details>
+          <summary>Can I add more pages later?</summary>
+          <p>Yes—this is a foundation. We can add pages/sections later as separate mini‑projects.</p>
+        </details>
+        <details>
+          <summary>Do you handle domains and email?</summary>
+          <p>Yes, via the <em>Custom Domain Setup</em> add‑on (DNS, SSL, www/non‑www, and basic email forwarding).</p>
+        </details>
+        <details>
+          <summary>Accessibility?</summary>
+          <p>We follow sensible defaults: semantic HTML, alt text, color‑contrast checks, and keyboard‑navigable controls.</p>
+        </details>
+      </div>
+      <div class="card" style="padding:16px">
+        <div class="kicker">Policies</div>
+        <h2 style="margin:6px 0 12px">Simple & fair</h2>
+        <details open>
+          <summary>Reschedule / Refunds</summary>
+          <p>Deposits are refundable up to 72 hours before kickoff. If either of us needs to reschedule inside 72 hours, we’ll roll your deposit to the next open weekend.</p>
+        </details>
+        <details>
+          <summary>Turnaround guarantee</summary>
+          <p>If we miss the weekend due to my side, you get a 20% discount on the balance. Client delays pause the clock.</p>
+        </details>
+        <details>
+          <summary>COI‑safe scope</summary>
+          <p>This service is for general small businesses and community orgs—no school/IEP consulting or overlapping IU5 services.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="book" class="card" style="margin-top:22px;padding:18px">
+      <div class="kicker">Get started</div>
+      <h2 style="margin:6px 0 12px">Book a free 15‑minute fit check</h2>
+      <p class="small">Pick a slot and include a link to any existing socials (Facebook, Google, Etsy) so I can match the look.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="YOUR_BOOK_WITH_ME_URL" target="_blank" rel="noopener">Open booking link</a>
+        <a class="btn btn-outline" href="YOUR_STRIPE_DEPOSIT_LINK" target="_blank" rel="noopener" id="pay-deposit">Pay $50 deposit</a>
+        <a class="btn btn-outline" href="YOUR_STRIPE_BALANCE_LINK" target="_blank" rel="noopener" id="pay-balance">Pay $449 launch balance (plus tax*)</a>
+      </div>
+      <p class="small">*PA clients: Website development is taxable when the site is transferred to you (files/repo/ownership). Hosting/domain configuration/support listed separately is non‑taxable.</p>
+      <!-- Stripe placeholders: replace YOUR_STRIPE_DEPOSIT_LINK / YOUR_STRIPE_BALANCE_LINK with your live Stripe Payment Links. Statement descriptor suggestion: ONE-WEEKEND WEB – JCLANDER LLC -->
+    </section>
+
+    <section id="invoice" class="card" style="margin-top:22px;padding:18px">
+      <div class="kicker">Template</div>
+      <h2 style="margin:6px 0 12px">Short Invoice (PA‑ready)</h2>
+      <p class="small">Copy/paste and fill the blanks. Use this when billing PA clients; tax the development portion if you transfer the website/files.</p>
+<pre style="background:#0f1319;border:1px solid #1e2633;border-radius:12px;padding:14px;white-space:pre-wrap;color:#cce7ff">Seller: <strong>JCLander LLC d/b/a One‑Weekend Websites</strong>
+Email: hello@jordanlander.com   Phone: (___) ___‑____
+Bill To: __________________________   Date: ________   Invoice #: ________
+
+Description                                  Qty    Rate      Amount
+--------------------------------------------------------------------------------
+Website development — launch‑ready one‑page   1      $499.00   $499.00   ← <em>Taxable in PA</em>
+Hosting / domain configuration / support     1      $50.00    $50.00    ← <em>Non‑taxable when separately stated</em>
+
+Subtotal (taxable): $499.00
+PA Sales Tax (6.00%)*: $29.94
+Subtotal (non‑taxable): $50.00
+--------------------------------------------------------------------------------
+Total Due: $578.94
+
+*Use local rate if applicable (Allegheny +1%, Philadelphia +2%).
+Payment: Stripe link or ACH (include terms). Deposit required to reserve weekend slot; balance due at launch.
+</pre>
+    </section>
+
+    <footer>
+      <div class="footgrid">
+        <div>© <span id="y"></span> JCLander LLC d/b/a One‑Weekend Websites • Lake City / Erie, PA
+          <div class="small">Built with clean HTML/CSS. Deployed on GitHub Pages or your host. Fast, accessible, and easy to extend.</div>
+        </div>
+        <div style="text-align:right">
+          <a href="#faq" style="margin-right:12px">Terms</a>
+          <a href="#faq">Refunds</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
