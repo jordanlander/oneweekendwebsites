@@ -42,6 +42,7 @@
   </script>
 </head>
 <body>
+  <a href="#main" class="skip-nav">Skip to main content</a>
   <header class="site-header">
     <div class="container">
       <a class="brand" href="#">
@@ -63,12 +64,12 @@
       </nav>
     </div>
   </header>
-  <main>
-  <section class="hero" aria-label="Hero">
+  <main id="main">
+  <section class="hero" aria-labelledby="hero-heading">
     <div class="container hero-content">
       <div>
         <span class="badge">$499 flat • Mobile‑first • Small‑biz friendly</span>
-        <h1 class="title">Your website, live by <em>Monday.</em></h1>
+        <h1 id="hero-heading" class="title">Your website, live by <em>Monday.</em></h1>
         <p class="subtitle">A clean, fast one‑page site for barbers, thrift/vintage, lawn care, churches, boosters, Etsy sellers—built over a single weekend. You provide the basics; I handle the rest.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#book">Book a free 15‑min fit check</a>
@@ -111,7 +112,9 @@
   </section>
 
   <div class="container">
-    <section id="pricing" class="grid cols-3" aria-label="Pricing">
+    <section id="pricing" aria-labelledby="pricing-heading">
+      <h2 id="pricing-heading">Pricing</h2>
+      <div class="grid cols-3">
       <div class="card pricing">
         <p class="kicker">Core Package</p>
         <h3>Launch‑Ready Site (48 hours)</h3>
@@ -152,19 +155,20 @@
         </ul>
         <p class="small">Keeps the weekend sprint realistic—and the price flat.</p>
       </div>
+      </div>
     </section>
 
-    <section id="process" class="card steps" style="margin-top:22px" aria-label="Process">
+    <section id="process" class="card steps" style="margin-top:22px" aria-labelledby="process-heading">
       <div class="kicker">How it works</div>
-      <h2 style="margin:6px 0 4px">48‑Hour Sprint</h2>
+      <h2 id="process-heading" style="margin:6px 0 4px">48‑Hour Sprint</h2>
       <div class="step"><div class="n">0</div><div><strong>Fit check (15 min, Thu/Fri)</strong><br/>We confirm scope, you send logo/colors/hours, and place a small deposit to hold the slot.</div></div>
       <div class="step"><div class="n">1</div><div><strong>Build day (Sat)</strong><br/>I assemble the site, tune copy, and optimize images. You get a private preview link for quick notes.</div></div>
       <div class="step"><div class="n">2</div><div><strong>Launch (Sun)</strong><br/>We push live to your domain (or a subdomain). You get a simple handoff doc + optional 30‑min walkthrough.</div></div>
     </section>
 
-    <section id="work" style="margin-top:22px" aria-label="Work">
+    <section id="work" style="margin-top:22px" aria-labelledby="work-heading">
       <div class="kicker">Recent work</div>
-      <h2 style="margin:6px 0 12px">Local builds that shipped</h2>
+      <h2 id="work-heading" style="margin:6px 0 12px">Local builds that shipped</h2>
       <div class="grid cols-3">
         <div class="card" style="padding:10px">
           <a href="https://www.integrityevsolutions.com" target="_blank" rel="noopener">
@@ -208,10 +212,12 @@
       </div>
     </section>
 
-    <section id="faq" style="margin-top:22px" class="grid cols-2" aria-label="FAQ">
+    <section id="faq" style="margin-top:22px" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">FAQ</h2>
+      <div class="grid cols-2">
       <div class="card" style="padding:16px">
         <div class="kicker">FAQ</div>
-        <h2 style="margin:6px 0 12px">What most folks ask</h2>
+        <h3 style="margin:6px 0 12px">What most folks ask</h3>
         <details open>
           <summary>What do you need from me to start?</summary>
           <p>Logo (or name), brand color (hex if you have it), hours, address, services, and 3–6 photos. That’s it. A quick 15‑minute fit check locks it in.</p>
@@ -235,7 +241,7 @@
       </div>
       <div class="card" style="padding:16px">
         <div class="kicker">Policies</div>
-        <h2 style="margin:6px 0 12px">Simple & fair</h2>
+        <h3 style="margin:6px 0 12px">Simple & fair</h3>
         <details open>
           <summary>Reschedule / Refunds</summary>
           <p>Deposits are refundable up to 72 hours before kickoff. If either of us needs to reschedule inside 72 hours, we’ll roll your deposit to the next open weekend.</p>
@@ -249,11 +255,12 @@
           <p>This starter is intentionally focused: a fast, one‑page site built in a weekend. E‑commerce and complex backends aren’t part of this package, but we can discuss them as a follow‑on.</p>
         </details>
       </div>
+      </div>
     </section>
 
-    <section id="book" class="card" style="margin-top:22px;padding:18px" aria-label="Book">
+    <section id="book" class="card" style="margin-top:22px;padding:18px" aria-labelledby="book-heading">
       <div class="kicker">Get started</div>
-      <h2 style="margin:6px 0 12px">Book a free 15‑minute fit check</h2>
+      <h2 id="book-heading" style="margin:6px 0 12px">Book a free 15‑minute fit check</h2>
       <p class="small">Pick a slot and include a link to any existing socials (Facebook, Google, Etsy) so I can match the look.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://cal.com/jordanlander/fit-check-15" target="_blank" rel="noopener">Open booking link</a>
@@ -268,9 +275,9 @@
       <!-- Stripe placeholders: replace YOUR_STRIPE_DEPOSIT_LINK / YOUR_STRIPE_BALANCE_LINK with your live Stripe Payment Links. Statement descriptor suggestion: ONE-WEEKEND WEB – JCLANDER LLC -->
     </section>
 
-    <section id="contact" class="card" style="margin-top:22px;padding:18px" aria-label="Contact">
+    <section id="contact" class="card" style="margin-top:22px;padding:18px" aria-labelledby="contact-heading">
       <div class="kicker">Contact</div>
-      <h2 style="margin:6px 0 12px">Send a quick message</h2>
+      <h2 id="contact-heading" style="margin:6px 0 12px">Send a quick message</h2>
       <form action="https://formsubmit.co/jordanlander@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="One‑Weekend Websites — New inquiry" />
         <input type="hidden" name="_template" value="table" />
