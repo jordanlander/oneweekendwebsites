@@ -1,0 +1,7 @@
+{
+  "name": "oneweekendwebsites",
+  "private": true,
+  "scripts": {
+    "test": "bash test-rich-results.sh"
+  }
+}
