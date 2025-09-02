@@ -85,5 +85,5 @@
         #sticky-cta{display:none}
         #mobile-sticky{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px;background:#0b0d10cc;backdrop-filter:blur(8px);z-index:50}
         #mobile-sticky a{flex:1}
-        footer{margin-bottom:80px}
+        body{padding-bottom:90px}
       }
