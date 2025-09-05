@@ -3,6 +3,7 @@
   --sh:0 8px 28px rgba(16,24,40,.12);
   --bg:#F7FAFF; --ink:#0B1220; --ink-2:#3C4A67; --muted:#E6EEF8;
   --brand:#3B82F6; --brand-2:#8B5CF6; --success:#22C55E; --success-bg:#ECFDF5;
+  --mobile-sticky-space:100px;
 }
 body{background:var(--bg);color:var(--ink);font:16px/1.55 ui-sans-serif,system-ui,Segoe UI,Inter,Arial;margin:0}
 .container{max-width:var(--max);margin:auto;padding:0 20px}
@@ -39,6 +40,9 @@ h2{font-size:28px;margin:6px 0 12px}
 .guarantee{background:var(--success-bg);border-left:6px solid var(--success);padding:12px;border-radius:12px}
 
 header.sticky{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(10px);border-bottom:1px solid #EEF2F7;z-index:50}
+header.sticky .container{display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+header.sticky nav{display:flex;gap:12px;align-items:center}
+.nav-toggle{display:none;background:none;border:0;font-size:24px}
 #mobile-sticky{display:none}
 @media (max-width:900px){
   body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
