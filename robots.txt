@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /book/
+Sitemap: https://www.oneweekendwebsites.com/sitemap.xml
