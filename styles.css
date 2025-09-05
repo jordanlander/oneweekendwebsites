@@ -50,6 +50,7 @@
 
     .pricing{padding:8px 18px 18px}
     .pricing h3{margin:10px 0 0}
+    .pricing.steward{grid-column:1 / -1;max-width:320px;justify-self:center}
     .price{font-size:30px;font-weight:900;margin:0}
     .inc{color:#cce7ff;margin:8px 0 0}
     .small{font-size:13px;color:var(--muted)}
