@@ -36,22 +36,37 @@
   </script>
 </head>
 <body>
-<header class="sticky">
-  <div class="container">
-    <a href="/" style="display:flex;gap:10px;align-items:center">
-      <img src="/logo.jpg" alt="One-Weekend Websites" width="34" height="34" style="border-radius:10px">
-      <strong>One-Weekend Websites</strong>
+<header class="site-header" data-autohide>
+  <div class="container header-bar">
+    <a class="brand" href="/">
+      <img src="/logo.jpg" alt="" width="34" height="34" class="logo">
+      <span>One-Weekend Websites</span>
     </a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation" type="button">☰</button>
-    <nav id="primary-nav" aria-label="Primary">
-      <a href="#process">Process</a>
-      <a href="#work">Work</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
-      <a href="#book">Book</a>
+
+    <!-- Mobile toggle -->
+    <button id="nav-toggle"
+            class="nav-toggle"
+            aria-label="Open menu"
+            aria-controls="site-nav"
+            aria-expanded="false"
+            type="button">
+      <span class="bars" aria-hidden="true"></span>
+    </button>
+
+    <!-- Nav -->
+    <nav id="site-nav" class="site-nav" aria-label="Main" hidden>
+      <ul class="nav-list">
+        <li><a href="#process">Process</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="https://cal.com/jordanlander/fit-check-15">Book free fit check</a></li>
+      </ul>
     </nav>
-    <a class="btn btn-primary" href="#book" id="sticky-cta">Book free fit check</a>
   </div>
+
+  <!-- Backdrop for mobile drawer -->
+  <div id="nav-backdrop" class="nav-backdrop" hidden></div>
 </header>
 <div id="mobile-sticky">
   <a class="btn btn-primary" href="#book">Book</a>
@@ -280,29 +295,62 @@
 </script>
 
 <script>
-  (function(){
-    var toggle = document.querySelector('.nav-toggle');
-    var menu = document.getElementById('primary-nav');
-    if(!toggle || !menu) return;
-    var firstLink = menu.querySelector('a');
-    toggle.addEventListener('click', function(){
-      var expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', String(!expanded));
-      menu.classList.toggle('open', !expanded);
-      if (!expanded && firstLink) {
-        firstLink.focus();
-      } else {
-        this.focus();
-      }
-    });
-    document.addEventListener('keydown', function(e){
-      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-        toggle.setAttribute('aria-expanded', 'false');
-        menu.classList.remove('open');
-        toggle.focus();
-      }
-    });
-  })();
+(function(){
+  const mqDesktop = window.matchMedia('(min-width: 901px)');
+  const header = document.querySelector('.site-header');
+  const btn = document.getElementById('nav-toggle');
+  const nav = document.getElementById('site-nav');
+  const backdrop = document.getElementById('nav-backdrop');
+
+  // Open/close helpers
+  function openNav(){
+    nav.hidden = false;
+    requestAnimationFrame(()=>{ nav.classList.add('open'); backdrop.hidden=false; backdrop.classList.add('open'); });
+    btn.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden'; // lock scroll
+    // focus first link
+    const firstLink = nav.querySelector('a'); firstLink && firstLink.focus();
+  }
+  function closeNav(){
+    nav.classList.remove('open'); backdrop.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+    // after transition, hide to remove from a11y tree
+    setTimeout(()=>{ if(!nav.classList.contains('open')){ nav.hidden=true; backdrop.hidden=true; } }, 200);
+    btn.focus();
+  }
+
+  btn.addEventListener('click', () => (btn.getAttribute('aria-expanded')==='true'? closeNav(): openNav()));
+  backdrop.addEventListener('click', closeNav);
+  window.addEventListener('keydown', e=>{ if(e.key==='Escape') closeNav(); });
+
+  // Close on link click
+  nav.addEventListener('click', e=>{
+    const a = e.target.closest('a'); if(a) closeNav();
+  });
+
+  // Reset state when resizing to desktop
+  mqDesktop.addEventListener('change', e=>{
+    if(e.matches){ // desktop
+      nav.hidden=false; nav.classList.remove('open'); backdrop.hidden=true; backdrop.classList.remove('open');
+      btn.setAttribute('aria-expanded','false'); document.body.style.overflow='';
+    } else { // back to mobile
+      nav.hidden=true;
+    }
+  });
+
+  // Auto-hide on scroll (down hides, up shows)
+  let lastY = window.scrollY, ticking=false;
+  function onScroll(){
+    const y = window.scrollY;
+    const goingDown = y > lastY && y > 40;
+    header.classList.toggle('autohide--up', goingDown && btn.getAttribute('aria-expanded')!=='true');
+    lastY = y; ticking=false;
+  }
+  window.addEventListener('scroll', ()=>{
+    if(!ticking){ window.requestAnimationFrame(onScroll); ticking=true; }
+  }, {passive:true});
+})();
 </script>
 
 <script type="application/ld+json">
