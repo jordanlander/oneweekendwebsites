@@ -6,7 +6,7 @@
   <title>One‑Weekend Websites — Launch‑Ready in 48 Hours | Jordan Lander</title>
   <meta name="description" content="Productized website build: Launch‑ready, mobile‑first, affordable one‑page sites for local businesses in 48 hours. Flat $499. Optional domain setup + photo pass. Book a free 15‑minute fit check." />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0b0d10" />
+  <meta name="theme-color" content="#ffffff" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="One‑Weekend Websites — Launch‑Ready in 48 Hours" />
@@ -22,536 +22,265 @@
   <link rel="canonical" href="https://www.oneweekendwebsites.com/" />
   <link rel="apple-touch-icon" href="/logo.jpg" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cal.com">
   <link rel="preconnect" href="https://square.link">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX1PBTTNDW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);} 
     gtag('js', new Date());
-
     gtag('config', 'G-SX1PBTTNDW');
-  </script>
-
-  <!-- JSON-LD schema for a productized service -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "One‑Weekend Websites",
-    "brand": {"@type":"Brand","name":"JCLander LLC"},
-    "description": "Launch‑ready one‑page websites for local businesses in 48 hours. Flat $499 with optional add‑ons.",
-    "offers": {
-      "@type": "Offer",
-      "price": "499",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    },
-    "category": "Web Design",
-    "url": "https://www.oneweekendwebsites.com/"
-  }
-  </script>
-
-  <!-- JSON-LD schema for local business -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfessionalService",
-    "name":"One-Weekend Websites",
-    "image":"https://www.oneweekendwebsites.com/logo.jpg",
-    "url":"https://www.oneweekendwebsites.com/",
-    "telephone":"+1-814-580-8040",
-    "priceRange":"$$",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Lake City",
-      "addressRegion":"PA",
-      "addressCountry":"US"
-    },
-    "areaServed":[
-      {"@type":"City","name":"Erie"},
-      {"@type":"City","name":"Girard"},
-      {"@type":"City","name":"Fairview"}
-    ],
-    "sameAs":[
-      "https://cal.com/jordanlander/fit-check-15"
-    ]
-  }
-  </script>
-
-  <!-- JSON-LD schema for FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"What do you need from me to start?","acceptedAnswer":{"@type":"Answer","text":"Logo (or name), brand color (hex if you have it), hours, address, services, and 3–6 photos. That’s it. A quick 15‑minute fit check locks it in."}},
-      {"@type":"Question","name":"How do payments work?","acceptedAnswer":{"@type":"Answer","text":"Small deposit to reserve a weekend slot; balance on launch. Card payments via Stripe/Square. Receipts provided."}},
-      {"@type":"Question","name":"Is there a monthly fee?","acceptedAnswer":{"@type":"Answer","text":"No. $499 is flat for your 48-hour build and launch. After launch, you can DIY everything (I give you the handoff doc), or choose an optional Site Steward plan if you want me to keep an eye on renewals, DNS/SSL, and tiny tweaks."}},
-      {"@type":"Question","name":"Can I add more pages later?","acceptedAnswer":{"@type":"Answer","text":"Yes—this is a foundation. We can add pages/sections later as separate mini‑projects."}},
-      {"@type":"Question","name":"Do you handle domains and email?","acceptedAnswer":{"@type":"Answer","text":"Yes, via the Custom Domain Setup add‑on (DNS, SSL, www/non‑www, and basic email forwarding)."}},
-      {"@type":"Question","name":"Accessibility?","acceptedAnswer":{"@type":"Answer","text":"We follow sensible defaults: semantic HTML, alt text, color‑contrast checks, and keyboard‑navigable controls."}},
-      {"@type":"Question","name":"Reschedule / Refunds","acceptedAnswer":{"@type":"Answer","text":"Deposits are refundable up to 72 hours before kickoff. If either of us needs to reschedule inside 72 hours, we’ll roll your deposit to the next open weekend."}},
-      {"@type":"Question","name":"Turnaround guarantee","acceptedAnswer":{"@type":"Answer","text":"If we miss the weekend due to my side, you get a 20% discount on the balance. Client delays pause the clock."}},
-      {"@type":"Question","name":"Scope & simplicity","acceptedAnswer":{"@type":"Answer","text":"This starter is intentionally focused: a fast, one‑page site built in a weekend. E‑commerce and complex backends aren’t part of this package, but we can discuss them as a follow‑on."}}
-    ]
-  }
   </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="#">
-        <img class="logo" src="/logo.jpg" alt="One‑Weekend Websites logo" decoding="async" />
+<header class="sticky">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:10px 0">
+    <a href="/" style="display:flex;gap:10px;align-items:center">
+      <img src="/logo.jpg" alt="One-Weekend Websites" width="34" height="34" style="border-radius:10px" />
+      <strong>One-Weekend Websites</strong>
+    </a>
+    <nav style="display:flex;gap:12px;align-items:center">
+      <a href="#process">Process</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn btn-primary" href="#book">Book free fit check</a>
+    </nav>
+  </div>
+</header>
+<div id="mobile-sticky">
+  <a class="btn btn-primary" href="#book">Book</a>
+  <a class="btn btn-outline" href="tel:18145808040">Call/Text</a>
+</div>
+
+<section class="container" style="padding:48px 0 24px">
+  <div class="grid cols-2">
+    <div>
+      <h1>Your website, live by Monday — $499 flat.</h1>
+      <p class="lead">Book Friday, build Saturday, launch Sunday. No bloated scope, no hourly surprises.</p>
+      <div style="display:flex;gap:10px;margin-top:12px">
+        <a class="btn btn-primary" href="https://cal.com/jordanlander/fit-check-15" target="_blank" rel="noopener">Book free fit check</a>
+        <a class="btn btn-outline" href="https://square.link/u/JCKqtjo5" target="_blank" rel="noopener">Pay $50 deposit</a>
+      </div>
+    </div>
+    <div class="card card-lg" style="padding:16px">
+      <div class="kicker">Simple 3-Step Process</div>
+      <div class="grid" id="process">
+        <div class="card" style="padding:12px">
+          <div style="display:flex;gap:10px;align-items:center"><span class="icon-num">1</span><strong>Friday: Book &amp; Plan</strong></div>
+          <ul class="list" role="list">
+            <li>✔ Fit check (15m)</li><li>✔ Deposit</li><li>✔ Send logo, services, photos</li>
+          </ul>
+        </div>
+        <div class="card" style="padding:12px">
+          <div style="display:flex;gap:10px;align-items:center"><span class="icon-num">2</span><strong>Saturday: Build Day</strong></div>
+          <ul class="list" role="list">
+            <li>✔ Clean, mobile-first page</li><li>✔ Copy polish</li><li>✔ Preview link</li>
+          </ul>
+        </div>
+        <div class="card" style="padding:12px">
+          <div style="display:flex;gap:10px;align-items:center"><span class="icon-num">3</span><strong>Sunday: Launch</strong></div>
+          <ul class="list" role="list">
+            <li>✔ Live on your domain</li><li>✔ Google indexing</li><li>✔ 2 image swaps post-launch</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="container" style="padding:32px 0">
+  <h2>Real Local Work</h2>
+  <p class="lead">Trusted by small businesses around Erie/Lake City, PA.</p>
+  <div class="grid cols-3" style="margin-top:12px">
+    <article class="tile g-indigo-blue">
+      <div class="kicker" style="color:#CFE2FF">Integrity EV Solutions</div>
+      <p style="margin:6px 0 10px">Professional EV charging site with simple service options, quote, and contact flow.</p>
+      <a class="pill" href="https://www.integrityevsolutions.com" target="_blank" rel="noopener">View site →</a>
+      <div style="margin-top:12px;display:flex;align-items:center;gap:6px" aria-label="5 out of 5 stars">
+        ⭐⭐⭐⭐⭐ <span style="opacity:.9">“Site + Google Ads boosted monthly installs.” — Integrity EV</span>
+      </div>
+    </article>
+    <article class="tile g-pink-purple">
+      <div class="kicker" style="color:#FFE5F6">Girard Arts</div>
+      <p style="margin:6px 0 10px">Vibrant community showcase with event sign-ups, donate, and contact.</p>
+      <a class="pill" href="https://girardarts.org" target="_blank" rel="noopener">View site →</a>
+    </article>
+    <article class="tile g-green">
+      <div class="kicker" style="color:#E6FFEF">Wiley Trucking</div>
+      <p style="margin:6px 0 10px">Straightforward services and “request a quote” flow for a regional fleet.</p>
+      <a class="pill" href="https://www.wileytrucking.com" target="_blank" rel="noopener">View site →</a>
+    </article>
+  </div>
+</section>
+
+<section id="pricing" class="container" style="padding:32px 0">
+  <h2>Simple, Transparent Pricing</h2>
+  <p class="lead">No hourly surprises. No hidden fees. You own everything.</p>
+  <div class="grid cols-3" style="align-items:start;margin-top:12px">
+    <div class="tile g-blue-purple card-lg">
+      <div class="kicker" style="color:#E6E6FF">Complete One-Page Website</div>
+      <div style="font-size:40px;font-weight:800;margin:10px 0">$499</div>
+      <ul class="list" role="list">
+        <li>✔ Mobile-first design</li>
+        <li>✔ Copy polish &amp; CTA</li>
+        <li>✔ Domain &amp; Google indexing</li>
+        <li>✔ 2 image swaps</li>
+        <li>✔ No monthly fees required</li>
+      </ul>
+      <div class="badge" style="margin-top:10px">Small, non-refundable deposit to hold your weekend</div>
+    </div>
+    <div class="card" style="padding:16px">
+      <div class="kicker">Custom Domain Setup — $50</div>
+      <p>Point your domain, SSL, and email forwarders handled.</p>
+      <ul class="list" role="list"><li>✔ DNS + HTTPS</li><li>✔ Email forwarder</li></ul>
+    </div>
+    <div class="card" style="padding:16px">
+      <div class="kicker">Photo Pass — $50</div>
+      <p>Optimize up to 10 photos for speed and clarity.</p>
+      <ul class="list" role="list"><li>✔ Compress &amp; crop</li><li>✔ Color/contrast tune</li></ul>
+    </div>
+  </div>
+  <div class="guarantee" style="margin-top:16px">
+    <strong>Our Guarantee:</strong> If I miss the launch window on my side → <strong>20% off</strong> the balance.
+  </div>
+</section>
+
+<section id="perfect" class="container" style="padding:32px 0">
+  <h2>Perfect For</h2>
+  <div class="grid cols-3" role="list" style="margin-top:12px">
+    <span class="pill" role="listitem">Barbers &amp; salons</span>
+    <span class="pill" role="listitem">Thrift &amp; vintage shops</span>
+    <span class="pill" role="listitem">Lawn care &amp; landscaping</span>
+    <span class="pill" role="listitem">Churches &amp; boosters</span>
+    <span class="pill" role="listitem">Etsy &amp; makers</span>
+    <span class="pill" role="listitem">Local services</span>
+  </div>
+</section>
+
+<section id="book" class="container" style="padding:32px 0">
+  <div class="card" style="padding:18px">
+    <div class="kicker">Get started</div>
+    <h2 style="margin:6px 0 12px">Book a free 15-minute fit check</h2>
+    <p class="lead">Pick a slot and include a link to any existing socials so I can match the look.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin:12px 0">
+      <a class="btn btn-primary" href="https://cal.com/jordanlander/fit-check-15" target="_blank" rel="noopener">Open booking link</a>
+      <a class="btn btn-outline" href="https://square.link/u/JCKqtjo5" target="_blank" rel="noopener" id="pay-deposit">Pay $50 deposit</a>
+      <a class="btn btn-outline" href="https://square.link/u/24s8uLsE" target="_blank" rel="noopener" id="pay-balance">Pay $449 launch balance (plus tax*)</a>
+    </div>
+    <p><strong>Prefer to call or email?</strong><br>
+      Call or text <a href="tel:18145808040">814‑580‑8040</a> ·
+      Email <a href="mailto:jordanlander@gmail.com?subject=One‑Weekend%20Websites%20Fit%20Check">jordanlander@gmail.com</a>
+    </p>
+    <p class="small">*PA clients: Website development is taxable when the site is transferred to you (files/repo/ownership). Hosting/domain configuration/support listed separately is non-taxable.</p>
+  </div>
+</section>
+
+<section id="contact" class="container" style="padding:32px 0">
+  <div class="card" style="padding:18px">
+    <div class="kicker">Contact</div>
+    <h2 style="margin:6px 0 12px">Send a quick message</h2>
+    <form action="https://formsubmit.co/jordanlander@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="One‑Weekend Websites — New inquiry" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_next" value="https://www.oneweekendwebsites.com/#thanks" />
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+      <div class="grid cols-2" style="margin-top:8px">
         <div>
-          <div style="font-weight:900;letter-spacing:.3px">One‑Weekend Websites</div>
-          <div style="color:var(--muted);font-size:12px">Launch‑ready in 48 hours</div>
+          <label for="name" class="small">Name</label>
+          <input id="name" name="name" required />
         </div>
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation" type="button">☰</button>
-      <nav id="primary-nav" aria-label="Primary">
-        <a href="#pricing">Pricing</a>
-        <a href="#process">Process</a>
-        <a href="#work">Work</a>
-        <a href="#faq">FAQ</a>
-        <a href="#book">Book</a>
-        <a href="#contact">Contact</a>
-        <a href="https://jordanlander.com" target="_blank" rel="noopener">About</a>
-      </nav>
-      <a class="btn btn-primary" href="#book" id="sticky-cta">Book free fit check</a>
+        <div>
+          <label for="email" class="small">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+      </div>
+      <div class="grid cols-2" style="margin-top:8px">
+        <div>
+          <label for="phone" class="small">Phone (optional)</label>
+          <input id="phone" name="phone" />
+        </div>
+        <div>
+          <label for="business" class="small">Business / Org (optional)</label>
+          <input id="business" name="business" />
+        </div>
+      </div>
+      <div style="margin-top:8px">
+        <label for="message" class="small">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;align-items:center">
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <span class="small" style="color:var(--ink-2)">Or call/text <a href="tel:18145808040">814‑580‑8040</a></span>
+      </div>
+    </form>
+    <div id="thanks" class="small" style="display:none;margin-top:12px;color:var(--success)">
+      ✅ Thanks! Your message was sent. I’ll reply shortly.
     </div>
-  </header>
-  <main>
-  <section class="hero" aria-label="Hero">
-    <div class="container hero-content">
+    <p class="small" style="margin-top:10px;color:var(--ink-2)">This form uses FormSubmit (free). We never sell your info. For faster replies, include your link(s) and ideal launch weekend.</p>
+  </div>
+</section>
+
+<section id="faq" class="container" style="padding:32px 0">
+  <h2>FAQ</h2>
+  <div class="grid" style="margin-top:12px">
+    <details class="card" style="padding:12px">
+      <summary>What do you need from me to start?</summary>
+      <p>Logo or name, brand color, services, hours, address, and 3–6 photos.</p>
+    </details>
+    <details class="card" style="padding:12px">
+      <summary>How do payments work?</summary>
+      <p>$50 deposit to hold the weekend; balance on launch via Square. PA clients: development is taxable when transferred.</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="padding:32px 0">
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between">
       <div>
-        <span class="badge">$499 flat • Mobile‑first • Small‑biz friendly</span>
-        <h1 class="title">Your website, live by <em>Monday.</em></h1>
-        <p class="subtitle">A clean, fast, affordable one‑page site for barbers, thrift/vintage, lawn care, churches, boosters, Etsy sellers—built over a single weekend. You provide the basics; I handle the rest.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#book">Book a free 15‑min fit check</a>
-          <a class="btn btn-outline" href="#pricing">See what’s included</a>
-        </div>
-        <div class="trust">
-          <span class="pill">No hourly bloat</span>
-          <span class="pill">Clear scope</span>
-          <span class="pill">Fast turnaround</span>
-          <span class="pill">Own your domain</span>
-        </div>
+        © <span id="y"></span> JCLander LLC d/b/a One‑Weekend Websites • Lake City / Erie, PA • <a href="tel:18145808040">814‑580‑8040</a> • <a href="mailto:jordanlander@gmail.com">jordanlander@gmail.com</a> • <a href="https://jordanlander.com" target="_blank" rel="noopener">About me</a>
       </div>
-      <div class="card" style="padding:18px">
-        <div class="kicker">Why this works</div>
-        <div class="grid cols-2" style="gap:12px">
-          <div>
-            <div style="font-weight:800;margin-bottom:6px">Proof in 10 seconds</div>
-            <ul class="small list">
-              <li><a href="https://www.integrityevsolutions.com" target="_blank" rel="noopener">Integrity EV Solutions</a></li>
-              <li><a href="https://girardarts.org" target="_blank" rel="noopener">Girard Music & Drama Boosters</a></li>
-              <li><a href="https://www.wileytrucking.com" target="_blank" rel="noopener">Wiley Trucking</a></li>
-            </ul>
-            <a class="pill" href="#work">View recent work →</a>
-          </div>
-          <div>
-            <div style="font-weight:800;margin-bottom:6px">48‑hour timeline</div>
-            <ol class="small list">
-              <li><strong>Fri:</strong> Fit check (15m) & deposit</li>
-              <li><strong>Sat:</strong> Build & preview link</li>
-              <li><strong>Sun:</strong> Launch to your domain</li>
-            </ol>
-            <div class="small" style="margin-top:6px">If I miss the window on my side → <strong>20% off</strong> the balance.</div>
-        </div>
-      </div>
-        <div class="small" style="margin-top:8px">★★★★★ “Looks amazing—having schedules, forms &amp; an interactive calendar supports our students &amp; community.” — Girard Music &amp; Drama Boosters</div>
-        <div class="small" style="margin-top:6px">★★★★★ “Website looks good and lead forms are working.” — Integrity EV Solutions</div>
-        <div class="cta-row" style="margin-top:10px">
-          <span
-  id="openings-pill"
-  class="pill"
-  data-username="jordanlander"
-  data-event-slug="fit-check-15"
-  data-timezone="America/New_York"
->Checking openings…</span>
-        </div>
+      <div style="text-align:right">
+        <a href="#faq" style="margin-right:12px">Terms</a>
+        <a href="#faq" style="margin-right:12px">Refunds</a>
+        <a href="/privacy.html">Privacy</a>
       </div>
     </div>
-  </section>
-
-  <div class="container">
-    <section id="pricing" class="grid cols-3" aria-label="Pricing">
-      <div class="card pricing">
-        <p class="kicker">Core Package</p>
-        <h3>Launch‑Ready Site (48 hours)</h3>
-        <p class="price">$499</p>
-        <ul class="list">
-          <li>One‑page site (hero, services, hours, map, contact)</li>
-          <li>Mobile‑first, fast load, basic SEO</li>
-          <li>Google Map + contact form or direct call button</li>
-          <li>Favicon + Open Graph share image</li>
-          <li>2 image swaps post‑launch (within 14 days)</li>
-        </ul>
-        <p class="inc">Delivery windows: Fri kickoff → Sun launch</p>
-        <p class="small">PA clients: Website development is taxable when ownership/files are transferred; hosting/domain configuration listed separately is non‑taxable.</p>
-        <div class="cta-row"><a class="btn btn-primary" href="#book">Book free fit check</a></div>
-      </div>
-
-      <div class="card pricing">
-        <p class="kicker">Popular Add‑Ons</p>
-        <h3>Upsells</h3>
-        <ul class="list">
-          <li><strong>Custom Domain Setup</strong> — <em>$50</em> (DNS, SSL, email forward)</li>
-          <li><strong>Photo Pass</strong> — <em>$50</em> (optimize 10 photos for web)</li>
-          <li><strong>Extra Section</strong> — <em>$75</em> (menu, gallery, pricing)</li>
-          <li><strong>Copy Polish</strong> — <em>$75</em> (voice + clarity edit)</li>
-          <li><strong>Basic Logo Lockup</strong> — <em>$75</em> (type‑driven)</li>
-        </ul>
-        <p class="small">All optional; pick only what you need.</p>
-      </div>
-
-      <div class="card pricing">
-        <p class="kicker">Scope Guardrails</p>
-        <h3>What’s not included</h3>
-        <ul class="list">
-          <li>E‑commerce checkout (we can link to Etsy/Square)</li>
-          <li>Custom backend or databases</li>
-          <li>More than 1 page (can add later)</li>
-          <li>Brand photography (Photo Pass optimizes what you have)</li>
-        </ul>
-        <p class="small">Keeps the weekend sprint realistic—and the price flat.</p>
-      </div>
-
-      <div class="card pricing" style="grid-column:1 / -1;max-width:320px;margin:0 auto">
-        <p class="kicker">Optional Care</p>
-        <h3>Site Steward</h3>
-        <p class="price">$149/yr</p>
-        <p class="small">(or $19/mo · no contract)</p>
-        <ul class="list">
-          <li>We keep DNS & SSL current</li>
-          <li>Renewal reminders (I’ll press the button)</li>
-          <li>Quarterly checkup (links/phone/booking)</li>
-          <li>1 tiny update/quarter</li>
-        </ul>
-        <p class="small">$499 covers your build & launch. This plan is just for people who want hands-off peace of mind.</p>
-        <p class="small">If you’ll include the domain when you hold it:</p>
-        <p class="small"><strong>Site Steward+</strong> — $199/yr (includes 1 domain renewal)</p>
-      </div>
-    </section>
-
-    <section id="process" class="card steps" style="margin-top:22px" aria-label="Process">
-      <div class="kicker">How it works</div>
-      <h2 style="margin:6px 0 4px">48‑Hour Sprint</h2>
-      <div class="step"><div class="n">0</div><div><strong>Fit check (15 min, Thu/Fri)</strong><br/>We confirm scope, you send logo/colors/hours, and place a small deposit to hold the slot.</div></div>
-      <div class="step"><div class="n">1</div><div><strong>Build day (Sat)</strong><br/>I assemble the site, tune copy, and optimize images. You get a private preview link for quick notes.</div></div>
-      <div class="step"><div class="n">2</div><div><strong>Launch (Sun)</strong><br/>We push live to your domain (or a subdomain). You get a simple handoff doc + optional 30‑min walkthrough.</div></div>
-    </section>
-
-    <section id="work" style="margin-top:22px" aria-label="Work">
-      <div class="kicker">Recent work</div>
-      <h2 style="margin:6px 0 12px">Local builds that shipped</h2>
-      <div class="grid cols-3">
-        <div class="card" style="padding:10px">
-          <a href="https://www.integrityevsolutions.com" target="_blank" rel="noopener">
-            <img alt="Integrity EV Solutions — EV charger installs in Northern Georgia / Atlanta" style="width:100%;border-radius:12px;border:1px solid #1e2633" src="/work-integrity-ev.jpg" loading="lazy" decoding="async"/>
-          </a>
-          <div style="margin-top:8px">
-            <strong>Integrity EV Solutions</strong>
-            <div class="small">Family‑owned EV charger installs • Northern Georgia / Atlanta</div>
-            <div class="small">One‑page services site with clear CTAs for quotes & contact.</div>
-            <div style="margin-top:8px">
-              <a class="pill" href="https://www.integrityevsolutions.com" target="_blank" rel="noopener">View site →</a>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="padding:10px">
-          <a href="https://girardarts.org" target="_blank" rel="noopener">
-            <img alt="Girard Music & Drama Boosters — community support for music & theatre education" style="width:100%;border-radius:12px;border:1px solid #1e2633" src="/work-girard-arts.jpg" loading="lazy" decoding="async"/>
-          </a>
-          <div style="margin-top:8px">
-            <strong>Girard Music & Drama Boosters</strong>
-            <div class="small">Community‑run boosters • Support the arts</div>
-            <div class="small">Clean home page with events & get‑involved links for parents and supporters.</div>
-            <div style="margin-top:8px">
-              <a class="pill" href="https://girardarts.org" target="_blank" rel="noopener">View site →</a>
-            </div>
-          </div>
-        </div>
-        <div class="card" style="padding:10px">
-          <a href="https://www.wileytrucking.com" target="_blank" rel="noopener">
-            <img alt="Wiley Trucking Fleet — Coast‑to‑coast freight from Erie, PA" style="width:100%;border-radius:12px;border:1px solid #1e2633" src="/work-wiley-trucking.jpg" loading="lazy" decoding="async"/>
-          </a>
-          <div style="margin-top:8px">
-            <strong>Wiley Trucking Fleet</strong>
-            <div class="small">Erie, PA • 53' Dry Van • Tanker • Doubles/Triples</div>
-            <div class="small">Straightforward services & contact flow with request‑a‑quote CTA.</div>
-            <div style="margin-top:8px">
-              <a class="pill" href="https://www.wileytrucking.com" target="_blank" rel="noopener">View site →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" style="margin-top:22px" class="grid cols-2" aria-label="FAQ">
-      <div class="card" style="padding:16px">
-        <div class="kicker">FAQ</div>
-        <h2 style="margin:6px 0 12px">What most folks ask</h2>
-        <details open>
-          <summary>What do you need from me to start?</summary>
-          <p>Logo (or name), brand color (hex if you have it), hours, address, services, and 3–6 photos. That’s it. A quick 15‑minute fit check locks it in.</p>
-        </details>
-        <details>
-          <summary>How do payments work?</summary>
-          <p>Small deposit to reserve a weekend slot; balance on launch. Card payments via Stripe/Square. Receipts provided.</p>
-        </details>
-        <details>
-          <summary>Is there a monthly fee?</summary>
-          <p>No. $499 is flat for your 48-hour build and launch. After launch, you can DIY everything (I give you the handoff doc), or choose an optional Site Steward plan if you want me to keep an eye on renewals, DNS/SSL, and tiny tweaks.</p>
-        </details>
-        <details>
-          <summary>Can I add more pages later?</summary>
-          <p>Yes—this is a foundation. We can add pages/sections later as separate mini‑projects.</p>
-        </details>
-        <details>
-          <summary>Do you handle domains and email?</summary>
-          <p>Yes, via the <em>Custom Domain Setup</em> add‑on (DNS, SSL, www/non‑www, and basic email forwarding).</p>
-        </details>
-        <details>
-          <summary>Accessibility?</summary>
-          <p>We follow sensible defaults: semantic HTML, alt text, color‑contrast checks, and keyboard‑navigable controls.</p>
-        </details>
-      </div>
-      <div class="card" style="padding:16px">
-        <div class="kicker">Policies</div>
-        <h2 style="margin:6px 0 12px">Simple & fair</h2>
-        <details open>
-          <summary>Reschedule / Refunds</summary>
-          <p>Deposits are refundable up to 72 hours before kickoff. If either of us needs to reschedule inside 72 hours, we’ll roll your deposit to the next open weekend.</p>
-        </details>
-        <details>
-          <summary>Turnaround guarantee</summary>
-          <p>If we miss the weekend due to my side, you get a 20% discount on the balance. Client delays pause the clock.</p>
-        </details>
-        <details>
-          <summary>Scope & simplicity</summary>
-          <p>This starter is intentionally focused: a fast, one‑page site built in a weekend. E‑commerce and complex backends aren’t part of this package, but we can discuss them as a follow‑on.</p>
-        </details>
-      </div>
-    </section>
-
-    <section id="book" class="card" style="margin-top:22px;padding:18px" aria-label="Book">
-      <div class="kicker">Get started</div>
-      <h2 style="margin:6px 0 12px">Book a free 15‑minute fit check</h2>
-      <p class="small">Pick a slot and include a link to any existing socials (Facebook, Google, Etsy) so I can match the look.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://cal.com/jordanlander/fit-check-15" target="_blank" rel="noopener">Open booking link</a>
-        <a class="btn btn-outline" href="https://square.link/u/JCKqtjo5" target="_blank" rel="noopener" id="pay-deposit">Pay $50 deposit</a>
-        <a class="btn btn-outline" href="https://square.link/u/24s8uLsE" target="_blank" rel="noopener" id="pay-balance">Pay $449 launch balance (plus tax*)</a>
-      </div>
-      <p><strong>Prefer to call or email?</strong><br>
-        Call or text <a href="tel:18145808040">814‑580‑8040</a> · 
-        Email <a href="mailto:jordanlander@gmail.com?subject=One‑Weekend%20Websites%20Fit%20Check">jordanlander@gmail.com</a>
-      </p>
-      <p class="small">*PA clients: Website development is taxable when the site is transferred to you (files/repo/ownership). Hosting/domain configuration/support listed separately is non‑taxable.</p>
-      <!-- Stripe placeholders: replace YOUR_STRIPE_DEPOSIT_LINK / YOUR_STRIPE_BALANCE_LINK with your live Stripe Payment Links. Statement descriptor suggestion: ONE-WEEKEND WEB – JCLANDER LLC -->
-    </section>
-
-    <section id="contact" class="card" style="margin-top:22px;padding:18px" aria-label="Contact">
-      <div class="kicker">Contact</div>
-      <h2 style="margin:6px 0 12px">Send a quick message</h2>
-      <form action="https://formsubmit.co/jordanlander@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="One‑Weekend Websites — New inquiry" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_next" value="https://www.oneweekendwebsites.com/#thanks" />
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-
-        <div class="grid cols-2" style="margin-top:8px">
-          <div>
-            <label for="name" class="small">Name</label>
-            <input id="name" name="name" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #2c3442;background:#0f1319;color:#eaf2ff" />
-          </div>
-          <div>
-            <label for="email" class="small">Email</label>
-            <input id="email" name="email" type="email" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #2c3442;background:#0f1319;color:#eaf2ff" />
-          </div>
-        </div>
-        <div class="grid cols-2" style="margin-top:8px">
-          <div>
-            <label for="phone" class="small">Phone (optional)</label>
-            <input id="phone" name="phone" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2c3442;background:#0f1319;color:#eaf2ff" />
-          </div>
-          <div>
-            <label for="business" class="small">Business / Org (optional)</label>
-            <input id="business" name="business" style="width:100%;padding:10px;border-radius:10px;border:1px solid #2c3442;background:#0f1319;color:#eaf2ff" />
-          </div>
-        </div>
-        <div style="margin-top:8px">
-          <label for="message" class="small">Message</label>
-          <textarea id="message" name="message" rows="4" required style="width:100%;padding:10px;border-radius:10px;border:1px solid #2c3442;background:#0f1319;color:#eaf2ff"></textarea>
-        </div>
-        <div class="cta-row" style="margin-top:12px">
-          <button class="btn btn-primary" type="submit">Send message</button>
-          <span class="small" style="color:#9fb3cc">Or call/text <a href="tel:18145808040">814‑580‑8040</a></span>
-        </div>
-      </form>
-      <div id="thanks" class="small" style="display:none;margin-top:12px;color:#34d399">
-        ✅ Thanks! Your message was sent. I’ll reply shortly.
-      </div>
-      <p class="small" style="margin-top:10px;color:#9fb3cc">This form uses FormSubmit (free). We never sell your info. For faster replies, include your link(s) and ideal launch weekend.</p>
-    </section>
   </div>
-  </main>
+</footer>
 
-  <footer>
-      <div class="footgrid">
-        <div>© <span id="y"></span> JCLander LLC d/b/a One‑Weekend Websites • Lake City / Erie, PA • <a href="tel:18145808040">814‑580‑8040</a> • <a href="mailto:jordanlander@gmail.com">jordanlander@gmail.com</a> • <a href="https://jordanlander.com" target="_blank" rel="noopener">About me</a>
-          
-        </div>
-        <div style="text-align:right">
-          <a href="#faq" style="margin-right:12px">Terms</a>
-          <a href="#faq" style="margin-right:12px">Refunds</a>
-          <a href="/privacy.html">Privacy</a>
-        </div>
-      </div>
-  </footer>
-  <div id="mobile-sticky">
-    <a class="btn btn-primary" href="#book">Book</a>
-    <a class="btn btn-outline" href="tel:18145808040">Call/Text</a>
-  </div>
-  <script>
-    (function(){
-      var toggle = document.querySelector('.nav-toggle');
-      var menu = document.getElementById('primary-nav');
-      if(!toggle || !menu) return;
-      var firstLink = menu.querySelector('a');
-      toggle.addEventListener('click', function(){
-        var expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', String(!expanded));
-        menu.classList.toggle('open', !expanded);
-        if (!expanded && firstLink) {
-          firstLink.focus();
-        } else {
-          this.focus();
-        }
-      });
-      document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-          toggle.setAttribute('aria-expanded', 'false');
-          menu.classList.remove('open');
-          toggle.focus();
-        }
-      });
-    })();
-  </script>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-  <script>
-    // Show the post‑submit thank‑you if redirected with #thanks
-    if (location.hash === '#thanks') {
-      var t = document.getElementById('thanks');
-      if (t) t.style.display = 'block';
-    }
-  </script>
-  <script>
-    (function(){
-      if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function(entries){
-          entries.forEach(function(entry){
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        },{threshold:0.1});
-        document.querySelectorAll('section').forEach(function(sec){
-          sec.classList.add('fade-in');
-          observer.observe(sec);
-        });
-      }
-    })();
-  </script>
-  <script>
-(async function () {
-  const el = document.getElementById('openings-pill');
-  if (!el) return;
-
-  const username = el.dataset.username;
-  const eventTypeSlug = el.dataset.eventSlug;       // e.g., "weekend-build-kickoff-30"
-  const timeZone = el.dataset.timezone || 'America/New_York';
-
-  // Month window (UTC date-only strings are allowed by the API)
-  const now = new Date();
-  const first = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1));
-  const last = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, 0));
-  const fmt = (d) => d.toISOString().slice(0, 10);  // YYYY-MM-DD
-
-  // Build request per Cal.com docs
-  const u = new URL('https://api.cal.com/v2/slots');
-  u.searchParams.set('eventTypeSlug', eventTypeSlug);
-  u.searchParams.set('username', username);
-  u.searchParams.set('start', fmt(first)); // start of day (UTC) accepted
-  u.searchParams.set('end', fmt(last));    // end of day (UTC) accepted
-  u.searchParams.set('timeZone', timeZone);
-
-  // Helper: weekday in specified TZ
-  const isSaturdayInTZ = (iso) => {
-    try {
-      const weekday = new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone })
-        .format(new Date(iso));
-      return weekday === 'Sat';
-    } catch { return false; }
-  };
-
-  // Fallback: count remaining Saturdays this month (manual)
-  const fallback = () => {
-    const today = new Date();
-    const year = today.getFullYear(), month = today.getMonth();
-    let d = new Date(year, month, 1), count = 0;
-    while (d.getMonth() === month) {
-      if (d.getDay() === 6 && d >= new Date(year, month, today.getDate())) count++;
-      d.setDate(d.getDate() + 1);
-    }
-    el.textContent = `${count} openings this month`;
-  };
-
-  try {
-    const res = await fetch(u.toString(), {
-      headers: { 'cal-api-version': '2024-09-04' } // required per docs
-    });
-    if (!res.ok) throw new Error('slots fetch failed');
-
-    const json = await res.json();
-    // Response is keyed by date; each value is an array of slots with ISO 'start'
-    // We only need UNIQUE Saturdays that have ≥1 slot (you run one kickoff per Sat)
-    const uniqueSaturdayKeys = new Set();
-
-    if (json?.data) {
-      // Iterate through all slot starts and mark Saturdays in ET
-      Object.values(json.data).forEach((arr) => {
-        (arr || []).forEach((slot) => {
-          const iso = slot.start || slot;
-          if (isSaturdayInTZ(iso)) {
-            // Normalize date string in ET for uniqueness
-            const dStr = new Intl.DateTimeFormat('en-CA', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit' })
-              .format(new Date(iso)); // -> YYYY-MM-DD
-            uniqueSaturdayKeys.add(dStr);
-          }
-        });
-      });
-    }
-
-    const count = uniqueSaturdayKeys.size;
-    el.textContent = `${count} opening${count === 1 ? '' : 's'} this month`;
-  } catch (e) {
-    // If the event is private or CORS blocks the call, fall back gracefully
-    fallback();
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  if (location.hash === '#thanks') {
+    var t = document.getElementById('thanks');
+    if (t) t.style.display = 'block';
   }
-})();
-  </script>
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What do you need from me to start?",
+     "acceptedAnswer":{"@type":"Answer","text":"Logo or name, brand color, services, hours, address, and 3–6 photos."}},
+    {"@type":"Question","name":"How do payments work?",
+     "acceptedAnswer":{"@type":"Answer","text":"$50 deposit to hold the weekend; balance on launch via Square. PA clients: development is taxable when transferred."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"One-Weekend Websites",
+  "url":"https://www.oneweekendwebsites.com/",
+  "telephone":"+1-814-580-8040",
+  "areaServed":[{"@type":"City","name":"Erie"},{"@type":"City","name":"Girard"},{"@type":"City","name":"Fairview"}]
+}
+</script>
 </body>
 </html>
