@@ -5,11 +5,14 @@
   --brand:#3B82F6; --brand-2:#8B5CF6; --success:#22C55E; --success-bg:#ECFDF5;
   --mobile-sticky-space:100px;
 }
-body{background:var(--bg);color:var(--ink);font:16px/1.55 ui-sans-serif,system-ui,Segoe UI,Inter,Arial;margin:0}
+body{background:#fff;color:var(--ink);font:16px/1.55 ui-sans-serif,system-ui,Segoe UI,Inter,Arial;margin:0}
 .container{max-width:var(--max);margin:auto;padding:0 20px}
 h1{font-size:40px;line-height:1.1;margin:8px 0 12px}
-h2{font-size:28px;margin:6px 0 12px}
+h2{font-size:32px;margin:6px 0 12px}
 .lead{color:var(--ink-2);font-size:18px}
+section.alt-band:nth-of-type(odd){background:#fff}
+section.alt-band:nth-of-type(even){background:var(--bg)}
+section p{color:var(--ink-2)}
 .section{padding:48px 0}
 .band{background:linear-gradient(135deg,#3B82F6 0%,#8B5CF6 100%);color:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:22px}
 .band--angled{position:relative;overflow:hidden}
