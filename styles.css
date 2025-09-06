@@ -1,6 +1,6 @@
 :root{
   --max:1120px; --r:18px; --r-lg:22px;
-  --sh:0 8px 28px rgba(16,24,40,.12);
+  --sh:0 8px 28px rgba(16,24,40,.10);
   --bg:#F7FAFF; --ink:#0B1220; --ink-2:#3C4A67; --muted:#E6EEF8;
   --brand:#3B82F6; --brand-2:#8B5CF6; --success:#22C55E; --success-bg:#ECFDF5;
   --mobile-sticky-space:100px;
@@ -12,13 +12,16 @@ h2{font-size:28px;margin:6px 0 12px}
 .lead{color:var(--ink-2);font-size:18px}
 .section{padding:48px 0}
 .band{background:linear-gradient(135deg,#3B82F6 0%,#8B5CF6 100%);color:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:22px}
+.band--angled{position:relative;overflow:hidden}
+.band--angled::after{content:"";position:absolute;left:0;right:0;bottom:-30px;height:60px;background:var(--bg);transform:skewY(-3deg)}
 .eyebrow{letter-spacing:.04em;text-transform:uppercase;font-weight:700;opacity:.9;font-size:12px}
 .grid{display:grid;gap:16px}
 .cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:900px){.cols-2,.cols-3{grid-template-columns:1fr}}
 
-.card{background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid #EEF2F7}
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid #EAF0F7;padding:16px}
+.card h3{margin:4px 0 8px}
 .card-lg{border-radius:var(--r-lg)}
 .tile{color:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:18px}
 .g-blue-purple{background:linear-gradient(135deg,#3B82F6 0%,#8B5CF6 100%)}
