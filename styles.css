@@ -63,7 +63,6 @@ section p{color:var(--ink-2)}
 .header-tagline{margin-left:20px;font-size:clamp(12px,1.5vw,14px)}
 @media (max-width:900px){.header-tagline{display:none}}
 .hero-tagline{justify-content:center;margin:12px 0 0;font-size:clamp(12px,3vw,18px);text-align:center}
-
 /* Desktop nav */
 .site-nav{display:block}
 .nav-list{display:flex;gap:12px;align-items:center;margin:0;padding:0;list-style:none}
