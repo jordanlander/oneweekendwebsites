@@ -58,6 +58,12 @@ section p{color:var(--ink-2)}
 .logo{border-radius:10px}
 .brand{display:flex;align-items:center;gap:10px;color:#0b1220;text-decoration:none;font-weight:700}
 
+.tagline{display:flex;align-items:center;gap:8px;font-weight:600;color:var(--ink-2);flex-wrap:wrap}
+.tagline .dot{font-size:10px;color:var(--brand)}
+.header-tagline{margin-left:20px;font-size:14px;white-space:nowrap}
+@media (max-width:900px){.header-tagline{display:none}}
+.hero-tagline{justify-content:center;margin:12px 0 0;font-size:18px;text-align:center}
+
 /* Desktop nav */
 .site-nav{display:block}
 .nav-list{display:flex;gap:12px;align-items:center;margin:0;padding:0;list-style:none}
