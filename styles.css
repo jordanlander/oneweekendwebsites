@@ -102,7 +102,7 @@ section p{color:var(--ink-2)}
 }
 
 /* Avoid anchor being hidden by sticky header */
-html,body{scroll-padding-top:72px;} /* adjust to actual header height */
+html{scroll-padding-top:72px;}
 
 #mobile-sticky{display:none}
 @media (max-width:900px){
