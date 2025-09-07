@@ -123,6 +123,7 @@ input,textarea{width:100%;padding:10px;border-radius:12px;border:1px solid #E5ED
 .small{font-size:14px;color:var(--ink-2)}
 footer{margin:40px 0 20px;color:var(--ink-2);font-size:14px}
 
-.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease-out,transform .6s ease-out}
-.fade-in.visible{opacity:1;transform:none}
+.fade-in{transition:opacity .6s ease-out,transform .6s ease-out}
+.js .fade-in{opacity:0;transform:translateY(20px)}
+.js .fade-in.visible{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){.fade-in{transition:none}}
