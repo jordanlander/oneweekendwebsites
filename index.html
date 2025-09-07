@@ -25,6 +25,7 @@
   <link rel="preconnect" href="https://cal.com">
   <link rel="preconnect" href="https://square.link">
   <link rel="preconnect" href="https://checkout.square.site">
+  <script>if('IntersectionObserver' in window){document.documentElement.classList.add('js');}</script>
   <link rel="stylesheet" href="styles.css">
 
   <!-- Google tag (gtag.js) -->
@@ -394,6 +395,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  if(!('IntersectionObserver' in window)) return;
   const faders = document.querySelectorAll('.fade-in');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
