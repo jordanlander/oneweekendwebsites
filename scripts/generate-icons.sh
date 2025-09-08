@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 # Generate optimized logo assets from source logo
 # Requires ImageMagick's `convert` command
 
