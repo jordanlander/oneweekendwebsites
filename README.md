@@ -9,6 +9,13 @@ This project uses [html-validate](https://github.com/html-validate/html-validate
 ```bash
 npx -y html-validate index.html privacy.html refunds.html terms.html
 npx -y stylelint styles.css
+npx -y linkinator terms.html privacy.html refunds.html --recurse --silent \
+  --skip 'https://.*' \
+  --skip 'mailto:.*' \
+  --skip 'tel:.*' \
+  --skip '/favicon.*' \
+  --skip '/apple-touch-icon.png' \
+  --skip '/web-app.*'
 ```
 
 > **Note**
