@@ -6,7 +6,7 @@
   <title>Privacy Policy — One‑Weekend Websites</title>
   <meta name="description" content="Privacy policy for One‑Weekend Websites.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0b0d10">
+  <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Privacy Policy — One‑Weekend Websites">
   <meta property="og:description" content="Privacy policy for One‑Weekend Websites.">
   <meta property="og:type" content="website">
@@ -28,6 +28,7 @@
   <link rel="preconnect" href="https://square.link">
   <link rel="preconnect" href="https://checkout.square.site">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
 
   <!-- Google tag (gtag.js) -->
@@ -47,6 +48,14 @@
         <img src="/White%20Logo%20One-Weekend%20Websites.png" alt="One Weekend Websites logo" width="34" height="34" class="logo">
         <span>One-Weekend Websites</span>
       </a>
+
+      <div class="tagline header-tagline">
+        <span>Trust that shows</span>
+        <span class="dot">•</span>
+        <span>Traffic grows</span>
+        <span class="dot">•</span>
+        <span>Revenue flows</span>
+      </div>
 
       <!-- Mobile toggle -->
       <button id="nav-toggle"
@@ -73,17 +82,34 @@
     <!-- Backdrop for mobile drawer -->
     <div id="nav-backdrop" class="nav-backdrop" hidden></div>
   </header>
-  <main class="container" style="padding-top:40px">
-    <h1>Privacy Policy</h1>
-    <p>We collect only the information needed to schedule and build your website. This may include your name, contact details, and project assets you provide. We never sell your data and only share it with trusted providers such as payment processors or scheduling tools to deliver our service. You can request deletion of your information at any time by contacting us.</p>
+  <main class="px-6 py-16 max-w-3xl mx-auto">
+    <h1 class="text-3xl font-extrabold mb-4">Privacy Policy</h1>
+    <p class="text-slate-600">We collect only the information needed to schedule and build your website. This may include your name, contact details, and project assets you provide. We never sell your data and only share it with trusted providers such as payment processors or scheduling tools to deliver our service. You can request deletion of your information at any time by contacting us.</p>
   </main>
-  <footer>
-    <div class="footgrid">
-      <div>© <span id="y"></span> JCLander LLC d/b/a One‑Weekend Websites • Lake City / Erie, PA • <a href="tel:18145808040">814‑580‑8040</a> • <a href="mailto:jordanlander@gmail.com">jordanlander@gmail.com</a> • <a href="https://jordanlander.com" target="_blank" rel="noopener">About me</a></div>
-      <div style="text-align:right">
-        <a href="terms.html" style="margin-right:12px">Terms</a>
-        <a href="refunds.html" style="margin-right:12px">Refunds</a>
-        <a href="privacy.html">Privacy</a>
+  <footer class="px-6 py-10 border-t">
+    <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3 items-center">
+      <div class="text-sm text-slate-500">
+        © <span id="y"></span> JCLander LLC • Lake City / Erie, PA
+        <div class="mt-1">814-580-8040 • <a href="mailto:jordanlander@gmail.com" class="underline">jordanlander@gmail.com</a></div>
+      </div>
+      <nav class="justify-self-center" aria-label="Footer">
+        <ul class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm">
+          <li><a href="https://jordanlander.com" target="_blank" rel="noopener" class="text-slate-600 hover:text-slate-900 underline decoration-dotted">About me</a></li>
+          <li><a href="/terms.html" class="text-slate-600 hover:text-slate-900 underline decoration-dotted">Terms</a></li>
+          <li><a href="/refunds.html" class="text-slate-600 hover:text-slate-900 underline decoration-dotted">Refunds</a></li>
+          <li><a href="/privacy.html" class="text-slate-600 hover:text-slate-900 underline decoration-dotted">Privacy</a></li>
+          <li class="hidden sm:block text-slate-400">•</li>
+          <li><a href="/#process" class="text-slate-600 hover:text-slate-900">Process</a></li>
+          <li><a href="/#work" class="text-slate-600 hover:text-slate-900">Work</a></li>
+          <li><a href="/#pricing" class="text-slate-600 hover:text-slate-900">Pricing</a></li>
+          <li><a href="/#faq" class="text-slate-600 hover:text-slate-900">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="justify-self-end flex flex-wrap gap-2 text-sm">
+        <a href="/#book" class="px-3 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Book</a>
+        <a href="https://square.link/u/JCKqtjo5" class="px-3 py-2 rounded-md border">Deposit</a>
+        <a href="https://square.link/u/u08vlvAR" class="px-3 py-2 rounded-md border">Pay in full</a>
+        <a href="https://square.link/u/wL2hwxEx" class="px-3 py-2 rounded-md border">Care</a>
       </div>
     </div>
   </footer>
